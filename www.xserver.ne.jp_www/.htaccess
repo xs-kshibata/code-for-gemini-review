@@ -1,0 +1,146 @@
+ErrorDocument 404 /404.php
+
+RewriteEngine on
+RewriteRule ^login_info.php$ https://secure.xserver.ne.jp/xapanel/login/xserver/$1 [R=301,L]
+RewriteRule ^login_server.php$ https://secure.xserver.ne.jp/xapanel/login/xserver/server/$1 [R=301,L]
+RewriteRule ^login_file.php$ https://secure.xserver.ne.jp/xapanel/login/xserver/ftp/$1 [R=301,L]
+RewriteRule ^login_file_old.php$ https://secure.xserver.ne.jp/xapanel/login/xserver/ftpold/$1 [R=301,L]
+RewriteRule ^login_mail.php$ https://secure.xserver.ne.jp/xapanel/login/xserver/mail/$1 [R=301,L]
+
+RewriteRule ^campaign/campaign_181001ylp.php$ https://www.xserver.ne.jp/ [R=301,L]
+RewriteRule ^img/campaign/181001ylp/(.*)$ https://www.xserver.ne.jp/ [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(xserver\.ne\.jp|faq\.xserver\.jp)(:80)? [NC]
+RewriteRule ^(.*)$ https://www.xserver.ne.jp/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^.*/index.php
+RewriteRule ^(.*)index.php$ https://www.xserver.ne.jp/$1 [R=301,L]
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/index\.html$
+RewriteRule ^(.*)$ / [R,L]
+
+RewriteCond %{REQUEST_URI} ^/company\.html$
+RewriteRule ^(.*)$ /company\.php [R,L]
+
+RewriteRule ^cojp.pdf$ https://www.xserver.ne.jp/dl/cojp.pdf [R=301,L]
+RewriteRule ^grjp.pdf$ https://www.xserver.ne.jp/dl/grjp.pdf [R=301,L]
+RewriteRule ^nejp.pdf$ https://www.xserver.ne.jp/dl/nejp.pdf [R=301,L]
+RewriteRule ^orjp.pdf$ https://www.xserver.ne.jp/dl/orjp.pdf [R=301,L]
+
+RewriteRule ^sass/(.*)$ https://www.xserver.ne.jp/ [R=301,L]
+RewriteRule ^(.*).gitignore$ https://www.xserver.ne.jp/ [R=301,L]
+RewriteRule ^(.*).prettierrc$ https://www.xserver.ne.jp/ [R=301,L]
+RewriteRule ^(.*).json$ https://www.xserver.ne.jp/ [R=301,L]
+RewriteRule ^(.*)README.md$ https://www.xserver.ne.jp/ [R=301,L]
+RewriteRule ^(.*)yarn.lock$ https://www.xserver.ne.jp/ [R=301,L]
+RewriteRule ^(.*)\.stylelintrc\.js$ https://www.xserver.ne.jp/ [R=301,L]
+RewriteRule ^(.*)gulpfile\.js$ https://www.xserver.ne.jp/ [R=301,L]
+
+RedirectMatch permanent ^\/login_info_nossl\.php$ /login_info.php
+RedirectMatch permanent ^\/login_server_nossl\.php$ /login_server.php
+RedirectMatch permanent ^\/login_file_nossl\.php$ /login_file.php
+RedirectMatch permanent ^\/login_mail_nossl\.php$ /login_mail.php
+
+RedirectMatch permanent ^\/login\/login_(.+)\.php$ /login_$1.php
+RedirectMatch permanent ^\/campaign_(.+)\.php$ /campaign/campaign_$1.php
+RedirectMatch permanent ^\/price_(.+)\.php$ /price/price_$1.php
+RedirectMatch permanent ^\/man_(.+)\.php$ /manual/man_$1.php
+RedirectMatch permanent ^\/faq_(.+)\.php$ /support/faq/faq_$1.php
+
+RedirectMatch permanent ^\/faq\.php$ /support/faq/index.php
+RedirectMatch permanent ^\/feature\.php$ /feature/index.php
+RedirectMatch permanent ^\/feedback\.php$ /feature/feedback.php
+RedirectMatch permanent ^\/functions\.php$ /functions/index.php
+RedirectMatch permanent ^\/information\.php$ /support/information.php
+RedirectMatch permanent ^\/man\.php$ /manual/index.php
+RedirectMatch permanent ^\/mente_detail\.php$ /information_detail.php
+RedirectMatch permanent ^\/news\.php$ /support/news.php
+RedirectMatch permanent ^\/order\.php$ /order/index.php
+RedirectMatch permanent ^\/order_form\.php$ /order/order_form.php
+RedirectMatch permanent ^\/resale\.php$ /manual/resale.php
+RedirectMatch permanent ^\/rule\.php$ /rule/rule.php
+RedirectMatch permanent ^\/service_backup\.php$ /functions/service_backup.php
+RedirectMatch permanent ^\/service_server\.php$ /functions/service_server.php
+RedirectMatch permanent ^\/service_ssl\.php$ /functions/service_ssl.php
+RedirectMatch permanent ^\/support\.php$ /support/index.php
+RedirectMatch permanent ^\/support_confirm\.php$ /support/confirm.php
+RedirectMatch permanent ^\/support_finish\.php$ /support/finish.php
+RedirectMatch permanent ^\/testsite\.php$ /feature/testsite.php
+RedirectMatch permanent ^\/whois\.php$ /order/whois.php
+RedirectMatch permanent ^\/login\.html$ /login_info.php
+
+RedirectMatch permanent ^\/dl\/(cojp|nejp|grjp|orjp)\.pdf$ https://www.xdomain.ne.jp/dl/$1.pdf
+
+RewriteCond %{REQUEST_URI} ^/price/price_x10.php$ [OR]
+RewriteCond %{REQUEST_URI} ^/price/price_x20.php$ [OR]
+RewriteCond %{REQUEST_URI} ^/price/price_x30.php$
+RewriteRule ^(.*)$ /price/index.php [R=301,L]
+
+RewriteCond %{REQUEST_URI} !^/rule_wptheme.php$
+RewriteCond %{REQUEST_URI} ^/rule_(.+).php$
+RewriteRule ^(.*)$ /rule/$1 [R=301,L]
+
+
+
+RewriteRule ^rule/rule_server.php$ https://www.xserver.ne.jp/rule/rule.php#rule-server [R=301,L,NE]
+RewriteRule ^rule/rule_domain.php$ https://www.xserver.ne.jp/rule/rule.php#rule-domain [R=301,L,NE]
+RewriteRule ^rule/rule_ssl.php$ https://www.xserver.ne.jp/rule/rule.php#rule-ssl [R=301,L,NE]
+
+RewriteRule ^manual/man_ftp_dream5_5_setting.php$ https://www.xserver.ne.jp/manual/man_ftp_dream_setting.php [R=301,L]
+RewriteRule ^manual/man_ftp_hpb11_hpb12_setting.php$ https://www.xserver.ne.jp/manual/man_ftp_hpb_setting.php [R=301,L]
+RewriteRule ^manual/man_ftp_setting_overssl.php$ https://www.xserver.ne.jp/manual/man_ftp_filezilla_setting.php [R=301,L]
+RewriteRule ^manual/man_db_shift_tool_5_5.php$ https://www.xserver.ne.jp/manual/man_db_shift_tool.php [R=301,L]
+RewriteRule ^manual/man_tool_domain.php$ https://www.xserver.ne.jp/manual/previous/man_tool_domain.php [R=301,L]
+RewriteRule ^manual/man_order_domain_ssl.php$ https://www.xserver.ne.jp/manual/man_order_ssl.php [R=301,L]
+
+RewriteRule ^support/faq/faq_tool_domain.php$ https://www.xserver.ne.jp/support/faq/previous/faq_tool_domain.php [R=301,L]
+RewriteRule ^support/faq/support_daiko_access.php$ https://www.xserver.ne.jp/support/faq/support_server_daiko_access.php [R=301,L]
+RewriteRule ^support/faq/support_daiko_data.php$ https://www.xserver.ne.jp/support/faq/support_server_daiko_data.php [R=301,L]
+RewriteRule ^support/faq/support_daiko_information.php$ https://www.xserver.ne.jp/support/faq/support_server_daiko_information.php [R=301,L]
+RewriteRule ^support/faq/support/faq/support_daiko_multiple.php$ https://www.xserver.ne.jp/support/faq/support_server_daiko_multiple.php [R=301,L]
+RewriteRule ^support/faq/support_daiko_ssl.php$ https://www.xserver.ne.jp/support/faq/support_server_daiko_ssl.php [R=301,L]
+RewriteRule ^support/faq/ssl_setting_prior.php$ https://www.xserver.ne.jp/support/faq/transfer_server_prior.php [R=301,L]
+
+
+RewriteRule ^support/faq/tool_info_id.php$ https://www.xserver.ne.jp/support/faq/service_missing_member_id.php [R=301,L]
+RewriteRule ^support/faq/faq_service_missing.php$ https://www.xserver.ne.jp/support/faq/faq_tool_info.php [R=301,L]
+
+RewriteRule ^support/faq/tool_info_forgot_password.php$ https://www.xserver.ne.jp/support/faq/faq_tool_info.php [R=301,L]
+RewriteRule ^support/faq/service_missing_infopanel_mailaddress.php$ https://www.xserver.ne.jp/support/faq/faq_tool_info.php [R=301,L]
+RewriteRule ^support/faq/tool_info_login_error.php$ https://www.xserver.ne.jp/support/faq/faq_tool_info.php [R=301,L]
+RewriteRule ^support/faq/tool_info_mail_undelivered.php$ https://www.xserver.ne.jp/support/faq/faq_tool_info.php [R=301,L]
+
+RewriteRule ^order/order_branch.php$ https://secure.xserver.ne.jp/xinfo/?action_register_index=on [R=301,L]
+RewriteRule ^opinion/.* https://secure.xserver.ne.jp/xinfo/?action_opinion_index=on [QSA,R=301,L]
+
+RewriteRule ^feature/affiliate.php$ https://www.xserver.ne.jp/affiliate.php [R=301,L]
+
+RewriteRule ^functions/service_daiko.php$ https://www.xserver.ne.jp/price/service_daiko.php [R=301,L]
+RewriteRule ^feature/wptheme.php$ https://www.xserver.ne.jp/feature/wordpress.php [R=301,L]
+
+RewriteRule ^price/price_domain.php$ https://www.xserver.ne.jp/domain/ [R=302,L]
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 7 days"
+ExpiresByType image/png "access plus 7 days"
+ExpiresByType image/gif "access plus 10 days"
+ExpiresByType image/jpg "access plus 10 days"
+ExpiresByType image/jpeg "access plus 10 days"
+ExpiresByType application/x-javascript "access plus 10 days"
+ExpiresByType application/javascript "access plus 10 days"
+ExpiresByType text/javascript "access plus 10 days"
+</IfModule>
+
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript

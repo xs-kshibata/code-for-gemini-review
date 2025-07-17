@@ -1,0 +1,81 @@
+//=============================================================
+//
+//  レイアウト枠
+//
+//=============================================================
+
+//-------------------------------------------------------------
+//  全体枠
+//-------------------------------------------------------------
+#wrapper {
+    @include mediaQueryS {
+        padding-top: 50px;
+
+        &.spnav-is-open {
+            padding-top: 0 !important;
+        }
+    }
+
+    @include mediaQueryM {
+        padding-top: 50px;
+
+        &.spnav-is-open {
+            padding-top: 0 !important;
+        }
+    }
+    @include mediaQueryL {
+        overflow: hidden;
+    }
+}
+
+#toggle-target {
+    @include mediaQueryL {
+        padding-top: 104px;
+    }
+}
+//-------------------------------------------------------------
+//  レイアウトフレーム
+//-------------------------------------------------------------
+.contents {
+    @include mediaQueryL {
+        margin: 0 auto 1px;
+    }
+}
+.main {
+    margin-bottom: 80px;
+
+    @include mediaQuerySM {
+        margin-bottom: 51px;
+    }
+}
+
+.col-main {
+    @include mediaQueryL {
+        float: right;
+        width: 760px;
+    }
+}
+
+.col-side {
+    @include mediaQuerySM {
+        position: relative;
+        padding: 40px 0;
+        background-color: #f8f8f8;
+        &::after {
+            content: "";
+            display: block;
+            width: 100vw;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #f8f8f8;
+            margin: 0 calc(50% - 50vw);
+            z-index: -1;
+        }
+    }
+    @include mediaQueryL {
+        float: left;
+        width: 275px;
+    }
+}

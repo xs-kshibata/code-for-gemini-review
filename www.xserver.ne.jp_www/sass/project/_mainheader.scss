@@ -1,0 +1,176 @@
+//=============================================================
+//
+//  メインヘッダー
+//
+//=============================================================
+.contents {
+    overflow:hidden;
+}
+.main-header {
+    display:flex;
+    align-items: center;
+    position:relative;
+    margin:0 0 15px;
+    * {
+        box-sizing: border-box;
+    }
+    &::before{
+        content:"";
+        display:block;
+        width:100vw;
+        height:100%;
+        position:absolute;
+        left:0;
+        top:0;
+        background:#eff4f8;
+        margin:0 calc(50% - 50vw);
+        z-index:0;
+    }
+    .ttl {
+        @include fz-rwd(18);
+        position: relative;
+        z-index: 2;
+        margin: 0;
+        padding-right: 15px;
+        background: linear-gradient(to right, rgba(#e4eef7, 0) 0%, rgba(#e4eef7, 1) 100%);
+        font-feature-settings: "palt";
+        line-height: 50px;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-left: 20px solid transparent;
+            border-left-color: #e4eef7;
+        }
+
+        span {
+            padding-bottom: 0;
+            &:after{
+                display:none;
+            }
+        }
+        @include mediaQuerySM {
+             margin-left: -3.5%;
+             padding-left:3.5%;
+        }
+    }
+}
+
+.main-header_subnav {
+    margin:0 0 0 auto;
+    display:flex;
+    position: relative;
+    z-index:2;
+    &>li {
+        margin:0 12px;
+        font-weight:500;
+        a {
+            overflow: hidden;
+            display: block;
+            position: relative;
+            color: $colorBody;
+            line-height: 50px;// 50-3
+            text-decoration: none;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                right: 0;
+                bottom: -3px;
+                left: 0;
+                height: 3px;
+                transition: bottom 0.2s ease-out;
+            }
+            &:hover,
+            &.is-current {
+                color: $colorSub;
+                &::after {
+                    background-color: $colorSub;
+                    bottom: 0;
+                }
+            }
+
+            .ico_new-window {
+                position: relative;
+                top: -0.1em;
+            }
+        }
+    }
+    @include mediaQuerySM {
+        display:none;
+    }
+}
+
+.suvnav_item_label_community,
+.suvnav_item_label_business_xbiz,
+.suvnav_item_label_business_partner {
+    &::after {
+        content: "";
+        display: inline-block!important;
+        width: 14px;
+        height: 14px!important;
+        position: relative!important;
+        margin-left: 3px;
+        background-image: url(../img/common/ico_blank_black.svg);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    &:hover,
+    &.is-current {
+        &::after {
+            background-color: transparent!important;
+            bottom: -3px!important;
+        }
+    }
+}
+
+//-------------------------------------------------------------
+//  ページタイトル
+//-------------------------------------------------------------
+.ttl {
+    position:relative;
+    margin: 0 0 40px;
+    display:table;
+    font-size: 2.2rem;
+    font-weight:500;
+    @include mediaQueryML {
+        font-size: 2.4rem;
+    }
+    @include mediaQueryL {
+        margin: 0 0 50px;
+        font-size: 3.2rem;
+    }
+    span{
+        position:relative;
+        display:inline-block;
+        padding-bottom: 15px;
+        @include mediaQueryL {
+            padding-bottom: 20px;
+        }
+        &:after {
+            content:"";
+            display:block;
+            position:absolute;
+            left:0;
+            bottom: 0;
+            width:100%;
+            height:5px;
+            background-image: linear-gradient( 90deg, rgb(82,200,222) 0%, rgb(25,94,196) 100%);
+        }
+    }
+
+    .ico {
+        margin: 0 8px 0 0;
+        font-size: 24px;
+        display:none;
+    }
+}

@@ -1,0 +1,959 @@
+@charset "euc-jp";
+
+/* ----------------------------------------------------------
+    ボタン / .btn
+------------------------------------------------------------- */
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0 5px;
+    border: none;
+    font-family: Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "游ゴシック", YuGothic, sans-serif;
+    line-height: 1.4;
+    text-align: center;
+    -webkit-transition: opacity .1s ease-out;
+    -o-transition: opacity .1s ease-out;
+    transition: opacity .1s ease-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.ltie7 .btn,
+.ie7 .btn {
+    display: inline;
+    zoom: 1;
+}
+.ie7 .btn,
+.ie8 .btn { filter: none; }
+.btn:hover {
+    opacity: .8;
+    filter: alpha(opacity=80);
+    -ms-filter: "alpha(opacity=80)";
+    -khtml-opacity: .8;
+    -moz-opacity: .8;
+}
+a.btn { text-decoration: none !important; }
+
+.btn .ico { margin-left: 5px; }
+.btn .imgico { margin-left: 5px; }
+
+/* オレンジ大ボタン - オレンジ+白文字 */
+.btn_orange-l {
+    padding: 18px;
+    background: #f7790b;/* Old Browsers */
+    background: -moz-linear-gradient(top, #f9a155 0, #f88724 50%, #f7790b 51%, #f7790b 100%); /* FF3.6+ */
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #f88724), color-stop(50%, #f88724), color-stop(51%, #f7790b), color-stop(100%, #f7790b));/* Chrome, Safari4+ */
+    background: -webkit-linear-gradient(top, #f9a155 0, #f88724 50%, #f7790b 51%, #f7790b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f9a155 0, #f88724 50%, #f7790b 51%, #f7790b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f9a155 0, #f88724 50%, #f7790b 51%, #f7790b 100%); /* IE 10+ */
+    background: linear-gradient(to bottom, #f9a155 0, #f88724 50%, #f7790b 51%, #f7790b 100%);/* W3C */
+    border-radius: 3px;
+    color: #fff !important;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 -1px 0 #d67227;
+    -webkit-box-shadow: inset 0 0 0 1px #f7790b, inset 0 0 0 2px #fff, 0 1px 3px rgba(0,0,0,.3);
+    -moz-box-shadow: inset 0 0 0 1px #f7790b, inset 0 0 0 2px #fff, 0 1px 3px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 0 1px #f7790b, inset 0 0 0 2px #fff, 0 1px 3px rgba(0,0,0,.3);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f88724', endColorstr='#f7790b', GradientType=0 );/* IE6-9 */
+}
+.ie7 .btn_orange-l,
+.ie8 .btn_orange-l { border-bottom: 2px solid #E16C07; }
+.btn_orange-l:hover { color: #fff; }
+
+/* ----------------------------------------------------------
+    アイコン / .ico
+------------------------------------------------------------- */
+@font-face {
+    font-family: 'xserver';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../../../css/fonts/xserver.eot?-yof791);
+    src: url(../../../css/fonts/xserver.eot?#iefix-yof791) format('embedded-opentype'),
+    url(../../../css/fonts/xserver.ttf?-yof791) format('truetype'),
+    url(../../../css/fonts/xserver.woff?-yof791) format('woff'),
+    url(../../../css/fonts/xserver.svg?-yof791#xserver) format('svg');
+}
+
+.ico {
+    font-family: 'xserver';
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    vertical-align: middle;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.ico_new-window:before { content: "\e61b"; }
+
+
+/* ----------------------------------------------------------
+
+    ■ 共通部分
+
+------------------------------------------------------------- */
+
+a:focus, *:focus { outline:none; }
+
+ul,ol {
+    max-height: 100%;
+    list-style: none;
+}
+.ul {
+    margin: 0 0 1em 1.5em;
+    list-style: disc outside;
+}
+.ol {
+    margin: 0 0 1em 2em;
+    list-style: decimal outside;
+}
+
+.mb0 {
+    margin-bottom: 0 !important;
+}
+
+#cpTop {
+    background: none;
+}
+#cpWrapper  {
+    background: url(../img/bg_wave_gold.png);
+}
+
+.present,
+.twi,
+.blog,
+.server {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.notes_ttl{
+    padding: 10px 0;
+    background: #caa533;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin-top: 0 !important;
+}
+
+.header_body,
+.mv_body,
+.present_body,
+.twi_body,
+.blog_body,
+.server_body,
+.notes_body {
+    max-width: 970px;
+    width: 90%;
+    margin: 0 auto;
+}
+.wrapper{
+    background: #f8f5f0;
+    max-width: 1080px;
+    position: relative;
+    padding: 0 8% 80px;
+    box-sizing: border-box;
+}
+.wrapper:before {
+    left: 30px;
+}
+.wrapper:after {
+    right: 30px;
+}
+.wrapper:before,
+.wrapper:after{
+    content: "";
+    display: block;
+    background: url(../img/bg_arrow.png) repeat center left;
+    width: 48px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.catch {
+    margin-top: 25px;
+}
+
+.convArea {
+    margin-top: 64px;
+}
+.convArea_text{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.convArea_text em{
+    color: #db2b39;
+}
+.convArea_btn {
+    max-width: 720px;
+    width: 100%;
+    padding: 20px;
+    font-size: 28px;
+    box-sizing: border-box;
+}
+
+.overview_table {
+    margin: 35px 25px 0;
+   }
+.overview_table tr {
+    display: block;
+    margin-top: 30px;
+}
+.overview_table tr:first-child {
+    margin-top: 0;
+}
+.overview_table th {
+    width: 140px;
+    padding-right: 15px;
+    font-size: 17px;
+}
+.overview_table .ol {
+    margin-bottom: 0;
+}
+.overview_ttl {
+    margin: 80px auto 0;
+    padding: 10px 20px;
+    background: #caa533;
+    font-size: 17px;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    max-width: 850px;
+}
+
+.copyright {
+    background: #333;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+.copyright p {
+    margin: 0;
+}
+
+.agreementTxt {
+    font-family: "MS PGothic";
+}
+
+.amazon_en {
+    font-family: Verdana,Roboto,"Noto Sans JP","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+}
+
+.amazon_ja {
+    font-family: "MS PGothic",Roboto,"Noto Sans JP","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+}
+
+@media only screen and (min-width: 970px) and (max-width: 1200px) {
+    .wrapper{
+        padding: 0 10% 80px;
+    }
+}
+
+/* 共通部分 タブレット */
+@media only screen and (min-width: 768px) and (max-width: 969px) {
+    .wrapper:before {
+        left: 2.4%;
+    }
+    .wrapper:after {
+        right: 2.4%;
+    }
+    .wrapper:before,
+    .wrapper:after{
+        width: 4%;
+    }
+}
+
+ /* 共通部分 SP */
+@media only screen and (min-width: 0) and (max-width: 767px) {
+
+    .shared_list {
+        display: none;
+    }
+    .shared_list.is-open {
+        padding: 20px;
+        background: #f8f8f8;
+    }
+    .present,
+    .twi,
+    .blog,
+    .server {
+        padding: 24px 8px;
+    }
+    .wrapper{
+        padding: 0 6% 40px;
+    }
+    .wrapper:before {
+        left: 1.6%;
+    }
+    .wrapper:after {
+        right: 1.6%;
+    }
+    .wrapper:before,
+    .wrapper:after{
+        background: url(../img/bg_arrow.png) repeat center left / 15px auto;
+        width: 2.4%;
+    }
+    .period {
+        padding: 8px 0;
+    }
+
+    .lead {
+        font-size: 14px;
+    }
+
+    .present_body,
+    .twi_body,
+    .blog_body,
+    .server_body,
+    .notes_body {
+        max-width: 100%;
+        width: auto;
+    }
+    .convArea{
+        margin-top: 24px;
+    }
+    .convArea_text{
+        font-size: 17px;
+    }
+
+    .overview_ttl {
+        font-size: 14px;
+        margin: 64px auto 0;
+    }
+    .overview_table {
+        margin: 24px 4% 0;
+    }
+    .overview_table th {
+        display: block;
+        width: 100%;
+        padding-right: 0;
+    }
+    .convArea_btn {
+        font-size: 20px;
+        padding: 10px 10px 13px;
+    }
+}
+
+/* ----------------------------------------------------------
+    ヘッダー / .header
+------------------------------------------------------------- */
+
+.header {
+    background: #FFF;
+    border-bottom: 1px solid #ccc;
+}
+.header_body {
+    padding: 20px 0 15px
+}
+
+.logo {
+    float: left;
+    width: 205px;
+    padding-left: 20px;
+}
+.logo a {
+    display: block;
+    width: 100%;
+}
+
+.shared {
+    float: right;
+}
+.shared_toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 0;
+    height: 30px;
+    background: url("../img/btn_share.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.shared_list {
+    padding-top: 10px;
+}
+.shared_list li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 784px) {
+    .shared_toggle {
+        width: 30px;
+    }
+}
+
+/* ヘッダー タブレット */
+@media only screen and (min-width: 768px) and (max-width: 969px) {
+    .header_body,
+    .mv_body,
+    .present_body,
+    .twi_body,
+    .domain_body,
+    .notes_body {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .header_body {
+        width: 100%;
+        padding: 20px 0 15px;
+    }
+    .shared_list {
+        padding-top: 10px;
+    }
+}
+
+/* ヘッダー SP */
+@media only screen and (min-width: 0) and (max-width: 767px){
+    .header_body {
+        width: 100%;
+        padding: 20px 0 0;
+    }
+    .logo {
+        width: 130px;
+        padding-bottom: 15px;
+    }
+    .shared_toggle {
+        width: 30px;
+    }
+    .shared {
+        width: 100%;
+    }
+}
+
+/* ----------------------------------------------------------
+    メインビジュアル / .mv
+------------------------------------------------------------- */
+.mv {
+    position: relative;
+}
+.mv:before {
+    background: url(../img/bg_mv.png) repeat center center;
+    height: 100%;
+    border-bottom: #caa533 4px solid;
+}
+.mv:after {
+    background: url(../img/bg_cloud.png) no-repeat center 64px;
+    height: 100%;
+}
+.mv:before,
+.mv:after{
+    content: "";
+    display: block;
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.mv_inner {
+    position: relative;
+}
+.mv_finish {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    background:rgba(0,0,0,.6);
+}
+.mv_finish span {
+    display:block;
+    background:#fff;
+    padding:30px;
+    font-size:33px;
+    font-weight:bold;
+    line-height:1;
+}
+.mv_body {
+    position: relative;
+    padding: 30px 0 55px;
+    z-index: 1;
+}
+.mv_body h2 {
+    width: 100%;
+    text-align: center;
+}
+.mv_xservercp {
+    position: relative;
+    padding: 15px 0;
+    background-color: #363e60;
+    text-align: center;
+    z-index: 1;
+}
+.mv_xservercp a {
+    display: inline-block;
+    max-width: 92%;
+}
+.mv_xservercp a:hover {
+    opacity: .8;
+}
+.period p {
+    margin-bottom: 0;
+    line-height: 1.2;
+    background: #caa533;
+    padding: 12px 1em;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: inline-block;
+}
+.period,
+.notes_ttl{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin: 16px auto 0;
+}
+
+/*メインビジュアル　SP*/
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    .mv:before {
+        background: url(../img/bg_mv_s.png) repeat center center / cover;
+    }
+    .mv:after {
+        background: url(../img/bg_cloud_s.png) no-repeat center 20% / 100% auto;
+    }
+    .mv_body {
+        width: 100%;
+        padding: 25px 0 15px;
+    }
+    .mv_body h2{
+        width: 72%;
+        margin: 0 auto;
+    }
+}
+
+/* ----------------------------------------------------------
+    リード文 / .lead
+------------------------------------------------------------- */
+.lead {
+    margin: 50px 0 35px;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* ----------------------------------------------------------
+    お年玉プレゼントキャンペーン / .present
+------------------------------------------------------------- */
+.catch p {
+    margin: 15px 0 0;
+    font-size: 18px;
+}
+.presentPrize {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.prizeItem {
+    position: relative;
+    width: 47.5%;
+    margin-top: 40px;
+    padding: 32px;
+    text-align: left;
+    box-shadow: 0 0 10px 0 #dbdbdb;
+    box-sizing: border-box;
+    background: #FFF;
+}
+.prizeItem:first-child,
+.prizeItem:nth-child(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.prizeItem:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    left: 8px;
+    top: 8px;
+    box-sizing: border-box;
+    border: #Caa533 1px solid;
+}
+.presentPrize-wchance .prizeItem {
+    justify-content: end;
+    max-width: 850px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 32px 8% 32px 32px;
+    position: relative;
+    z-index: 1;
+}
+.prizeItem_wcimg {
+    margin: 25px 0 20px auto;
+}
+.prizeItem_band {
+    position: absolute;
+    left: -12px;
+    top: -16px;
+    display: block;
+    width: 89px;
+}
+.prizeItem_band-l{
+    width: 186px;
+}
+.prizeItem_band img {
+    width: 100%;
+}
+.prizeItem_img {
+    margin-bottom: 0;
+    text-align: center;
+}
+.prizeItem:first-child .prizeItem_img,
+.prizeItem:nth-child(2) .prizeItem_img {
+    width: 36%;
+}
+.prizeItem:nth-child(2) .prizeItem_img {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prizeItem:nth-child(3) .prizeItem_img,
+.prizeItem:nth-child(4) .prizeItem_img{
+    min-height: 282px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.presentPrize-wchance > p {
+    width: 100%;
+    max-width: 850px;
+    margin: 50px auto 0;
+}
+.presentPrize-wchance .prizeItem_img {
+    padding: 16px 0;
+    min-height: inherit !important;
+    margin: 0 0 0 auto;
+}
+.presentPrize-wchance .prizeItem_band {
+    width: 180px;
+}
+
+.itemDetail {
+    margin: 0 20px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: end;
+}
+.prizeItem:first-child .itemDetail,
+.prizeItem:nth-child(2) .itemDetail {
+    width: 58%;
+}
+.itemDetail_cat{
+    display: block;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #898989;
+    border-bottom: 1px dashed  #898989;
+    width: 100%;
+}
+.itemDetail_name{
+    font-size: 18px;
+    font-weight: bold;
+}
+.itemDetail_name_small {
+    font-size: 16px;
+}
+.itemDetail_number{
+    font-size: 20px;
+    font-weight: bold;
+    color: #d0181a;
+    line-height: 1;
+}
+.itemDetail_number b{
+    font-size: 32px;
+}
+.prizeItem:first-child .itemDetail_cat,
+.prizeItem:nth-child(2)  .itemDetail_cat {
+    font-size: 18px;
+}
+.prizeItem:first-child .itemDetail_name,
+.prizeItem:nth-child(2) .itemDetail_name {
+    font-size: 24px;
+}
+.prizeItem:first-child .itemDetail_number,
+.prizeItem:nth-child(2) .itemDetail_number {
+    font-size: 30px;
+}
+.prizeItem:first-child .itemDetail_number b,
+.prizeItem:nth-child(2) .itemDetail_number b {
+    font-size: 42px;
+}
+
+/*  タブレット */
+@media only screen and (min-width: 768px) and (max-width: 969px) {
+    .prizeItem {
+        width: 46.5%;
+    }
+    .prizeItem:first-child .itemDetail,
+    .prizeItem:nth-child(2) .itemDetail{
+        margin-left: 48px;
+    }
+    .presentPrize-wchance .prizeItem_img{
+        padding-top: 32px;
+    }
+}
+
+/* thanks SP*/
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    .catch .catch__attention {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .presentPrize {
+        margin: 0 auto 45px;
+    }
+    .prizeItem {
+        width: 100%;
+        padding: 32px 16px 24px !important;
+        margin-top: 24px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .prizeItem:before {
+        width: calc(100% - 8px);
+        height: calc(100% - 8px);
+        left: 4px;
+        top: 4px;
+    }
+    .prizeItem_band {
+        width: 56px;
+    }
+    .prizeItem_img{
+        width: 44% !important;
+        box-sizing: border-box;
+    }
+    .prizeItem:first-child .prizeItem_img{padding: 0 4%;}
+    .prizeItem:nth-child(2) .prizeItem_img,
+    .prizeItem:nth-child(3) .prizeItem_img,
+    .prizeItem:nth-child(4) .prizeItem_img {
+        min-height: inherit;
+    }
+    .prizeItem:nth-child(3) .prizeItem_img,
+    .prizeItem:nth-child(4) .prizeItem_img {
+        padding: 0 3%;
+    }
+    .itemDetail {
+        margin: 0;
+        width: 56% !important;
+        padding: 0 4%;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .itemDetail_cat {
+        font-size: 10px !important;
+    }
+    .itemDetail_name {
+        font-size: 13px !important;
+        line-height: 1.4;
+    }
+    .itemDetail_name_small {
+        font-size: 10px;
+    }
+    .itemDetail_number {
+        font-size: 13px !important;
+        align-self: flex-end;
+        margin-top: .4em;
+    }
+    .itemDetail_number b {
+        font-size: 16px !important;
+    }
+    .presentPrize-wchance > p{
+        margin: 24px auto 0;
+    }
+    .presentPrize-wchance .prizeItem{
+        margin: 24px auto 40px;
+    }
+
+    .presentPrize-wchance .prizeItem_band {
+        width: 90px;
+        left: -8px;
+        top: -12px;
+    }
+    .presentPrize-wchance .prizeItem_img{
+        width: 92% !important;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+/* ----------------------------------------------------------
+    注意事項 / .notes
+------------------------------------------------------------- */
+.notes {
+    padding: 0;
+    background: #f8f5f0;
+    text-align: left;
+}
+.notes_body {
+    padding: 50px 5% 90px;
+}
+.notes_body h4 {
+    margin-top: 30px;
+}
+.notes_body h5,
+.notes_body .ul {
+    margin-top: 25px;
+}
+.notes_body textarea {
+    width: 90%;
+    max-width: 865px;
+    height: 160px;
+    padding: 30px;
+    margin: 20px 0;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+/* notes タブレット*/
+@media only screen and (min-width: 768px) and (max-width: 969px) {
+    .notes_body textarea {
+        width: 90%;
+    }
+}
+
+/* notes sp*/
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    .notes_body {
+        padding: 35px 20px 90px;
+    }
+    .notes_body textarea {
+        width: 80%;
+    }
+}
+
+/* ----------------------------------------------------------
+    XServer 通常キャンペーン / .xservercp
+------------------------------------------------------------- */
+.xservercp {
+    padding: 50px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.xservercp_box {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.xservercp_img {
+    margin: 30px 0;
+}
+
+/* ボタン */
+.xservercp_btn {
+    display: inline-block;
+    width: 500px;
+    padding: 12px 5px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    background: #ff8400;
+    box-shadow: 0 4px 0 0 #e57700;
+    border-radius: 6px;
+    transition: .3s;
+    box-sizing: border-box;
+}
+
+a.xservercp_btn {
+    text-decoration: none;
+}
+
+a.xservercp_btn:hover {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 0 #e57700;
+    color:#fff;
+}
+
+/* キャンペーン詳細 */
+.xservercp_holder {
+    background-color: #f5f5f5;
+}
+
+.xservercp_holder .overview_ttl {
+    margin-top: 40px;
+}
+
+.xservercp_table {
+    width: 92%;
+    margin: 30px auto;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.xservercp_table th {
+    width: 190px;
+    font-size: 16px;
+}
+
+.xservercp_table tr {
+    display: block;
+    margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+    .xservercp .xservercp_table {
+        max-width: 750px;
+    }
+}
+
+@media only screen and (max-width: 969px) {
+    .xservercp_holder {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .xservercp_table th,
+    .xservercp_table td {
+        display: block;
+        width: 100%;
+    }
+
+    .xservercp_box,
+    .xservercp_btn {
+        width: 95%;
+    }
+
+    .xservercp_img {
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .mv_finish span {
+        padding: 3vw;
+        font-size: 3.2vw;
+    }
+}

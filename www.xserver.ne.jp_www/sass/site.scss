@@ -1,0 +1,106 @@
+@charset "euc-jp";
+
+// ▼ 変数、ミックスインなどSass用定義
+@import 'variable';
+@import 'mixin';
+@import 'functions';
+
+// ▼ 単機能の汎用的なクラス（.cf、.mb10など）
+@import 'utility';
+
+// ▼ 基本設定（リセットなど）
+@import 'base';
+
+// ▼ 再利用可能なコンポーネント（見出し、ボタンなど）
+@import 'component/block';
+@import 'component/border';
+@import 'component/box';
+@import 'component/btn';
+@import 'component/code';
+@import 'component/holder';
+@import 'component/icon';
+@import 'component/img';
+@import 'component/imgico';
+// @import 'component/label';
+@import 'component/link';
+@import 'component/list';
+@import 'component/media';
+@import 'component/msg';
+@import 'component/note';
+@import 'component/section';
+@import 'component/sticker';
+@import 'component/subttl';
+@import 'component/table';
+@import 'component/tooltip';
+@import 'component/topicpath';
+@import 'component/form';
+@import 'component/slick';
+
+// ▼ プロジェクト固有で唯一性のある要素（ヘッダー/フッター、レイアウト枠、ページタイトルなど）
+@import 'project/footer';
+@import 'project/header';
+@import 'project/layout';
+@import 'project/mainheader';
+@import 'project/searchresults';
+@import 'project/sidebox';
+@import 'project/sub';
+
+// ▼ ページ個別のスタイル
+
+// トップ
+#pid-top {
+    @import 'contents/top';
+}
+
+// 特長
+#pid-feature {
+    @import 'contents/feature';
+}
+
+// 機能
+#pid-functions {
+    @import 'contents/functions';
+}
+
+// 料金
+#pid-price {
+    @import 'contents/price';
+}
+
+// お申し込みの流れ・ドメイン検索
+#pid-order {
+    @import 'contents/order';
+}
+
+// マニュアル
+#pid-manual {
+    @import 'contents/manual';
+}
+
+// サポート・よくある質問
+#pid-support,
+#pid-faq {
+    @import 'contents/support';
+}
+
+// ログイン
+#pid-login {
+    @import 'contents/login';
+}
+
+// ニュース
+#pid-support {
+    @import 'contents/news';
+}
+
+// 各種案内・情報ページ用
+#pid-info,
+#pid-404,
+#pid-ylp,
+#pid-saec {
+    @import 'contents/info';
+}
+
+#pid-saec {
+    background: #fff!important;
+}

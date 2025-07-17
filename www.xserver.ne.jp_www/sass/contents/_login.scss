@@ -1,0 +1,452 @@
+
+//-------------------------------------------------------------
+// フォーム系パーツ
+//-------------------------------------------------------------
+
+// IE11 デフォルトのアイコンを消す
+input::-ms-reveal,
+input::-ms-clear {
+    visibility:hidden;
+}
+
+input[type="text"],
+input[type="password"] {
+    box-sizing:border-box;
+    width: 80%;
+    padding:1em 20px 1em 1em;
+    font-size:14px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 80%;
+    padding:1em;
+    font-size:14px;
+}
+
+/* focus */
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus{
+    outline:1px;
+    border-color:#333;
+    background-color:#eee;
+    line-height:1;
+}
+
+.ico_eye_field {
+    display:inline-block;
+    position:relative;
+}
+
+.ico_eye {
+    display: inline-block;
+    position:absolute;
+    width: 22px;
+    height: 22px;
+    top:-16px;
+    left:-40px;
+    background-position: middle center;
+    background-repeat:no-repeat;
+    cursor:pointer;
+}
+
+
+.ico_eye_close {
+    background-image: url(../img/common/ico_eye_close.png);
+}
+
+.ico_eye_open {
+    background-image: url(../img/common/ico_eye_open.png);
+}
+
+.form_hide {display: none !important}
+
+/* スマホ */
+@media only screen and (min-width: 0) and (max-width: 767px) {
+
+    /* placeholder */
+    :placeholder-shown {
+        text-align: center;
+    }
+
+
+    /* Google Chrome, Safari, Opera 15+, Android, iOS */
+    ::-webkit-input-placeholder {
+        text-align: center ;
+    }
+
+
+    /* Firefox 18- */
+    :-moz-placeholder { opacity: 1;
+        text-align: center ;
+    }
+
+    /* Firefox 19+ */
+    ::-moz-placeholder { opacity: 1;
+        text-align: center ;
+    }
+
+    /* IE 10+ */
+    :-ms-input-placeholder {
+        text-align: center ;
+    }
+
+
+
+}
+
+
+//-------------------------------------------------------------
+// ログイン
+//-------------------------------------------------------------
+
+.loginHeader {
+    position:relative;
+    padding:2px 0 0 56px;
+    width: 80%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.loginHeader__ttl {
+    margin-bottom:.25em;
+    font-size:1.2em;
+}
+
+.loginHeader__img {
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+
+.loginTable {
+    width:100%;
+    border-top:3px solid;
+    margin-bottom:20px;
+    th {
+        padding:1em;
+        border-bottom:1px solid #ccc;
+        width:40%;
+    }
+    td {
+        padding:1em;
+        border-bottom:1px solid #ccc;
+    }
+}
+
+
+input [type="submit"]  {
+    font-size:1.2em;
+    padding:1em 4em;
+}
+
+.btnarea {
+    text-align: center ;
+    margin-bottom:20px;
+}
+
+.btnarea {
+.btn {
+    display:block;
+    margin:0 auto;
+    padding:.8em 5em;
+    border-radius:4px;
+    background-color: #ebebeb;
+    text-decoration:none;
+    text-align: center;
+    box-shadow:0 2px 2px 0 rgba(0,0,0,0.3);
+    transition:.3s;
+    font-size:1.2em;
+    font-weight:bold;
+    color:#fff;
+    }
+}
+
+.btn:hover {
+    box-shadow:0 0 2px 0 rgba(0,0,0,0.2);
+    opacity: 0.8;
+    transition: .3s;
+}
+
+
+.infopanel {
+    .loginHeader__ttl {
+        color: #1b63a7;
+    }
+    .loginTable {
+        border-top-color: #1b63a7;
+        th {
+            background-color: #e6f2fd;
+        }
+    }
+    .btn {
+        background-color: #1b63a7;
+        color:#fff;
+    }
+}
+
+
+.serverpanel {
+    .loginHeader__ttl {
+        color: #f78601;
+    }
+    .loginTable {
+        border-top-color: #f78601;
+        th {
+            background-color: #faeee4;
+        }
+    }
+    .btn {
+        background-color: #f78601;
+        color:#fff;
+    }
+}
+
+.webmail {
+    .loginHeader__ttl {
+        color: #9a55aa;
+    }
+    .loginTable {
+        border-top-color: #9a55aa;
+        th {
+            background-color: #f1e9f3;
+        }
+    }
+    .btn {
+        background-color: #9a55aa;
+        color:#fff;
+    }
+}
+
+
+.webftp {
+    .loginHeader__ttl {
+        color: #018847;
+    }
+    .loginTable {
+        border-top-color: #018847;
+        th {
+            background-color: #e3f9e3;
+        }
+    }
+    .btn {
+        background-color: #018847;
+        color:#fff;
+    }
+}
+
+.newLogin{
+    display: flex;
+    width: 80%;
+    margin: 30px auto 0;
+    background: #f7f7f7;
+    border: 1px solid #b7cde3;
+    padding: 2rem;
+    align-items: center;
+    box-sizing: border-box;
+
+    &_text{
+        width: 56%;
+        padding-right: 30px;
+    }
+    &_ttl{
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 0.3em;
+    }
+
+    .btnarea{
+        margin: 0;
+
+        a{
+            padding: 20px 32px;
+        }
+    }
+}
+
+
+/* タブレット */
+@media only screen and (max-width: 959px) {
+
+    .newLogin{
+        display: block;
+
+        &_text{
+            width: 100%;
+            padding-right: 0;
+        }
+
+        .btnarea{
+
+            a{
+                display: inline-block;
+                padding: 20px;
+                margin-top: 15px;
+            }
+        }
+    }
+
+}
+
+
+/* スマホ */
+@media only screen and (min-width: 0) and (max-width: 767px) {
+
+    .loginHeader {
+        padding-left:0;
+        width: 100%;
+        &__ttl {
+            padding-left:30px;
+        }
+    }
+
+        .loginTable {
+        th {
+            padding:1em 0;
+            width:100%;
+        }
+        td {
+            padding:.5em 0 1.5em;
+        }
+    }
+    .infopanel .loginTable th,
+    .serverpanel .loginTable th,
+    .webmail .loginTable th,
+    .webftp .loginTable th {
+        background-color: #fff;
+        border-bottom:0;
+        padding-bottom:0;
+    }
+
+    .newLogin{
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+        padding: 1.2rem;
+
+        .btnarea{
+            margin: 0;
+
+            a{
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+}
+
+.login{
+    display:block;
+    margin:0 auto;
+    &.serverpanel{
+        .loginForm{
+            &__item {
+                &--caption {
+                    color: #f78601;
+                }
+            }
+        }
+    }
+    &.webftp{
+        .loginForm{
+            &__item {
+                &--caption {
+                    color: #018847;
+                }
+            }
+        }
+    }
+    &.webmail{
+        .loginForm{
+            &__item {
+                &--caption {
+                    color: #9a55aa;
+                }
+            }
+        }
+    }
+}
+.loginForm{
+    display:table;
+    margin:20px auto;
+    input[type="text"],
+    input[type="password"]{
+        width:100%;
+        &::placeholder{
+            text-align:left;
+        }
+    }
+    &__item{
+        margin:20px 0 0;
+        &--caption{
+            color:#1b63a7;
+            font-weight:bold;
+        }
+        &--input{
+            margin:5px 0 0;
+            width:440px;
+            position:relative;
+            .ico_eye_field{
+                position:absolute;
+                top:0;
+                right:0;
+                height:100%;
+                .ico_eye{
+                    top:50%;
+                    right:15px;
+                    margin-top:-11px;
+                }
+            }
+        }
+        &--note{
+            margin:5px 0 0;
+            color:#666;
+            font-size:12px;
+        }
+    }
+    @include mediaQueryS {
+        display:block;
+        &__item{
+            &--input{
+                width:auto;
+            }
+        }
+    }
+}
+.btnarea{
+    margin:40px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

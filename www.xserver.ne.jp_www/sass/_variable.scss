@@ -1,0 +1,46 @@
+// =============================================================
+//
+//   変数
+//
+// =============================================================
+
+// -------------------------------------------------------------
+//   カラー
+// -------------------------------------------------------------
+$colorBody: #2f334c;
+$colorMain: #1b63a7;
+$colorMainLight: #2b72b5;
+$colorSub: #286ed3;
+$colorSubLight: #3382f3;
+$colorOrange: #f7790b;
+$colorOrangeLight: #f98d2f;
+$colorOrangeDark: #e5700a;
+$colorGreen: #66bb1f;
+$colorGreenLight: #82c847;
+
+// -------------------------------------------------------------
+//   サイズ
+// -------------------------------------------------------------
+$widthPC: 1100px;
+$headerHeightSP: 50px;
+
+// -------------------------------------------------------------
+//   その他
+// -------------------------------------------------------------
+$duration: 0.3s;
+
+// -------------------------------------------------------------
+//   メディアクエリ
+// -------------------------------------------------------------
+$breakpointS: "only screen and (min-width: 0) and (max-width: 767px)";
+$breakpointM: "only screen and (min-width: 768px) and (max-width: " + ($widthPC - 1) + ")";
+$breakpointL: "only screen and (min-width: " + $widthPC + ")";
+$breakpointSM: "only screen and (max-width: " + ($widthPC - 1) + ")";
+$breakpointML: "only screen and (min-width: 768px)";
+$breakpoints: (
+    s: $breakpointS,
+    m: $breakpointM,
+    l: $breakpointL,
+    sm: $breakpointSM,
+    ml: $breakpointML
+);

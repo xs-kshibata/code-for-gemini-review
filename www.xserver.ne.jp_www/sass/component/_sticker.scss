@@ -1,0 +1,29 @@
+//=============================================================
+//
+//  ステッカー
+//
+//=============================================================
+.sticker {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 4px 5px;
+    background: #eca700;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
+    vertical-align: middle;
+    text-decoration: none !important;
+    -webkit-box-shadow: 0 0 3px 0 #ccc;
+    -moz-box-shadow: 0 0 3px 0 #ccc;
+    box-shadow: 0 1px 1px 0 #ccc;
+    -webkit-transition: background-color .1s ease-out;
+    -o-transition: background-color .1s ease-out;
+    transition: background-color .1s ease-out;
+}
+a.sticker:hover {
+    background: #E59600;
+    color: #fff;
+}

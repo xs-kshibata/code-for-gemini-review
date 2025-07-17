@@ -1,0 +1,908 @@
+//=============================================================
+//
+//  サブコンテンツ(トップページの右カラム、下層ページのフッター手前エリア)
+//
+//=============================================================
+
+.sub {}
+
+//-------------------------------------------------------------
+//  お申し込み
+//-------------------------------------------------------------
+.trial-footer {
+    padding: 40px 3.125vw 30px;
+    margin: 0 auto;
+    background:url(../img/common/footer_cta_bg.png) no-repeat center center;
+    background-size:cover;
+    text-align: center;
+    @include mediaQueryM {
+        padding: 50px 2.605vw 40px;
+    }
+    @include mediaQueryL {
+        padding: 80px 10px 70px;
+    }
+
+    &_txt {
+        margin-bottom: 20px;
+        color: #fff;
+        font-feature-settings: "palt";
+        font-size: 2.2rem;
+        font-weight: bold;
+        line-height: 1.3;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        @include mediaQueryM {
+            margin-bottom: 25px;
+            font-size: 2.4rem;
+        }
+        @include mediaQueryL {
+            margin-bottom: 35px;
+            font-size: 3.4rem;
+        }
+    }
+
+    &_flow-link-sub {
+        margin: 7px 0 0;
+        text-align: center;
+        color:#fff;
+
+        .ico {
+            vertical-align: -1px;
+        }
+
+        a {
+            color:#fff;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+@include mediaQueryS {
+    .trial {
+        margin: 0 0 10px;
+        padding: 20px 0;
+        background: $colorMain;
+        border-bottom: 1px solid #fff;
+        border-top: 1px solid #fff;
+        box-shadow: 0 0 0 1px #185a99;
+
+        &_ttl {
+            margin: 0 0 10px;
+            padding: 8px 10px;
+            background: #fff;
+            border-radius: 3px;
+            color: $colorMain;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        &_term {
+            margin: 0 0 10px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1;
+            text-align: center;
+
+            b {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+@include mediaQueryM {
+    .trial {
+        padding: 15px 0;
+        background: $colorMain;
+    }
+
+    .trial_wrap {
+        float: left;
+        width: 49%;
+    }
+
+    .trial_ttl {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        width: 50%;
+        height: 50px;
+        background: #fff;
+        border-radius: 3px 0 0 3px;
+        color: $colorMain;
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .trial_term {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        float: right;
+        width: 50%;
+        height: 50px;
+        margin: 0;
+        border: 2px solid #fff;
+        border-radius: 0 3px 3px 0;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+
+        img { margin-top: 6px; }
+    }
+}
+
+@include mediaQueryL {
+    .trial {
+        .btn_orange-l {
+            float: right;
+            display: block;
+            width: 470px;
+            height: 60px;
+            padding: 0;
+            line-height: 60px;
+        }
+    }
+
+    .trial_wrap {
+        float: left;
+        width: 470px;
+    }
+
+    .trial_ttl {
+        float: left;
+        width: 235px;
+        height: 60px;
+        background: #fff;
+        border-radius: 3px 0 0 3px;
+        color: $colorMain;
+        line-height: 60px;
+        text-align: center;
+    }
+
+    .trial_term {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: right;
+        width: 235px;
+        height: 60px;
+        margin: 0;
+        border: 2px solid #fff;
+        border-radius: 0 3px 3px 0;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+
+        .ie7 & {
+            width: 256px;
+            height: 56px;
+        }
+
+        img { margin: 11px 0 0; }
+    }
+}
+
+
+//-------------------------------------------------------------
+//  お問い合わせ、サポートコンテンツ / 電話お問い合わせ 共通
+//-------------------------------------------------------------
+.help,
+.tel-footer {
+    * {
+        box-sizing: border-box;
+    }
+
+    .holder-sml {
+        max-width: 1080px;
+    }
+}
+
+.help .help_content_ttl,
+.tel-footer .tel_content_ttl,
+.help-s .help_content_ttl{
+    color: $colorMain;
+    font-size: 1.6rem;
+    margin: 0 0 5px;
+    font-feature-settings: "palt";
+    @include mediaQueryML {
+        padding-right: 1em;
+    }
+    @include mediaQueryL {
+        font-size: 1.8rem;
+    }
+}
+
+.help .help_content_info,
+.tel-footer .tel_content_info {
+    margin-bottom: 1em;
+    font-feature-settings: "palt";
+    font-size: 1.3rem;
+    line-height: 1;
+    @include mediaQueryML {
+        min-width: 20.5em;
+        margin: 0;
+        padding-right: 1em;
+    }
+    @include mediaQueryL {
+        font-size: 1.4rem;
+    }
+}
+
+//-------------------------------------------------------------
+//  お問い合わせ、サポートコンテンツ
+//-------------------------------------------------------------
+
+.help {
+    padding-bottom: 40px;
+    @include mediaQueryL {
+        padding-bottom: 60px;
+    }
+
+    .help_content {
+        padding: 20px 0;
+        border-top:1px solid #eee;
+        @include mediaQueryML {
+            display: flex;
+        }
+        @include mediaQueryL {
+            padding: 30px 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+        &_emailblock {
+            flex-wrap: wrap;
+            .help_content_info {
+                line-height: 1.3;
+            }
+            .help_content_info_ttl {
+                display: inline-block;
+                min-width: 3.5em;
+            }
+        }
+    }
+
+    .help_content_btns {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+        @include mediaQueryML {
+            margin: 0 -15px;
+        }
+        @include mediaQueryS {
+            display: block;
+        }
+        li {
+            width: 50%;
+            padding: 0 8px;
+            @include mediaQueryML {
+                width: auto;
+                padding: 7px 15px;
+            }
+
+            @include mediaQueryS {
+                width: 100%;
+                margin-bottom: 1em;
+            }
+
+            .button {
+                display: block;
+                @include mediaQueryS {
+                    min-width: auto;
+                }
+            }
+
+            .community {
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    width: 14px;
+                    height: 1em;
+                    background-image: url(../img/common/ico_blank_black.svg);
+                    background-position: 0 0;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    margin: auto;
+                    top: 0;
+                    right: .5em;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+    .help_content_note {
+        width: 100%;
+        margin-top: 10px;
+        .note {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+//-------------------------------------------------------------
+//  電話お問い合わせ
+//-------------------------------------------------------------
+.tel-footer {
+    margin: 0 auto;
+    padding: 40px 0 15px;
+    @include mediaQueryL {
+        padding: 60px 0 25px;
+    }
+
+    .tel-footer_body {
+        @include mediaQueryML {
+            display: flex;
+        }
+    }
+
+    .tel_content_numberblock {
+        > li {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            & + li {
+                margin-top: 12px;
+            }
+        }
+
+        .numberblock_category {
+            position: relative;
+            width: 15.5em;
+            margin: 0;
+            padding: 0 1em 0 0.7em;
+            font-weight: 500;
+            font-size:1.5rem;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0.5em;
+                left: 0;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: $colorBody;
+            }
+        }
+
+        .numberblock_number {
+            margin: 5px 0;
+            @include mediaQueryML {
+                margin: 0;
+            }
+
+            img {
+                width:180px;
+                height:auto;
+                @include mediaQueryL {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .tel_content_inner {
+        margin-top: 10px;
+        font-size: 1.3rem;
+        @include mediaQueryML {
+            margin-top: 20px;
+        }
+        .annotation {
+            margin: 0;
+            padding-left: 1em;
+            font-feature-settings: "palt";
+            text-indent: -1em;
+        }
+    }
+}
+
+//-------------------------------------------------------------
+//  お問い合わせ、サポートコンテンツ（縮小版）
+//-------------------------------------------------------------
+
+.help-s{
+    padding-top: 20px;
+    @include mediaQueryL {
+        padding-top: 30px;
+    }
+    .help_content{
+        &:first-child{
+          border: none;
+        }
+        @include mediaQueryML {
+            align-items: center;
+        }
+    }
+    .help_content_ttl{
+        @include mediaQueryML {
+            min-width: 17em;
+        }
+    }
+    .help_content_new .help_content_btns li,
+    .help_content_existing .help_content_btns li{
+        width: inherit;
+    }
+    .help_content_new .help_content_ttl,
+    .help_content_existing .help_content_ttl{
+        @include mediaQueryML{
+            margin: 0;
+        }
+    }
+}
+
+//-------------------------------------------------------------
+//  アフィリエイト
+//-------------------------------------------------------------
+@include mediaQueryS {
+    .affiliate {
+        margin: 0 0 10px;
+        background: #fff2dc;
+        text-align: center;
+
+        &_ttl {
+            padding: 7px 0;
+            background: #ffc517;/* Old Browsers */
+            background: linear-gradient(to bottom, #ffc517 0, #ffaa17 100%);/* W3C */
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+
+            &_label {
+                display: inline;
+            }
+
+            &_img {
+                width: 41px;
+                height: 27px;
+            }
+        }
+
+        &_body {
+            padding: 10px 0 20px;
+            p { color: #f88522; }
+        }
+    }
+
+    .btn_affiliate {
+        display: block;
+        margin: 0 0 5px;
+        padding: 8px 12px;
+        background: #fff;/* Old Browsers */
+        background: linear-gradient(to bottom, #fff 0, #fff 50%, #fcf7ed 51%, #fcf7ed 100%);/* W3C */
+        border-radius: 3px;
+        color: #f88931 !important;
+        font-weight: bold;
+        text-shadow: 0 1px 0 #fff;
+        box-shadow: inset 0 0 0 1px #fff, 0 1px 3px rgba(0,0,0,.3);
+    }
+}
+
+@include mediaQueryM {
+    .affiliate {
+        margin: 0 0 10px;
+        background: #fff2dc;
+        text-align: center;
+
+        &_ttl {
+            padding: 7px 0;
+            background: #ffc517;/* Old Browsers */
+            background: linear-gradient(to bottom, #ffc517 0, #ffaa17 100%);/* W3C */
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+
+            &_label { display: inline; }
+            &_img {
+                width: 41px;
+                height: 27px;
+            }
+        }
+
+        &_body {
+            padding: 10px 0;
+
+            p {
+                display: inline-block;
+                margin: 0 10px 0 0;
+                color: #f88522;
+            }
+        }
+    }
+
+    .btn_affiliate {
+        padding: 8px 50px;
+        background: #fff;/* Old Browsers */
+        background: linear-gradient(to bottom, #fff 0, #fff 50%, #fcf7ed 51%, #fcf7ed 100%);/* W3C */
+        border-radius: 3px;
+        color: #f88931 !important;
+        font-weight: bold;
+        text-shadow: 0 1px 0 #fff;
+        box-shadow: inset 0 0 0 1px #fff, 0 1px 3px rgba(0,0,0,.3);
+    }
+}
+
+@include mediaQueryL {
+    .affiliate {
+        max-width: 1010px;
+        margin: 0 auto 20px;
+        padding: 20px 0;
+        background: #fff2dc;
+        border-bottom: 1px solid #e3d8c4;
+        border-top: 1px solid #fff9ee;
+        text-align: left;
+
+        &_ttl {
+            display: inline-block;
+            width: 280px;
+            margin: 0 15px 0 0;
+            padding: 8px 10px 5px 10px;
+            background: #ffab17;
+            border-radius: 3px;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            box-shadow: 0 -1px 0 #e49100;
+
+            &_label { display: inline; }
+            &_img {
+                width: 41px;
+                height: 27px;
+            }
+        }
+
+        &_body {
+            display: inline-block;
+
+            p {
+                display: inline-block;
+                margin: 0 10px 0 0;
+                color: #f88522;
+            }
+        }
+    }
+
+    .btn_affiliate {
+        padding: 8px 50px;
+        background: #fff;/* Old Browsers */
+        background: linear-gradient(to bottom, #fff 0, #fff 50%, #fcf7ed 51%, #fcf7ed 100%);/* W3C */
+        border-radius: 3px;
+        color: #f88931 !important;
+        font-weight: bold;
+        text-shadow: 0 1px 0 #fff;
+        box-shadow: inset 0 0 0 1px #fff, 0 1px 3px rgba(0,0,0,.3);
+    }
+}
+
+//-------------------------------------------------------------
+//  キャンペーン情報の噴出し
+//-------------------------------------------------------------
+.trial-footer_btn {
+    @include mediaQueryML {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.trial-footer_btn_link {
+    position: relative;
+    text-decoration: none !important;
+    &:hover {
+        .trial-footer_btn_txt {
+            background-color: $colorOrangeLight;
+            &::after {
+                right: 0.5em;
+            }
+        }
+    }
+}
+
+.trial-footer_btn_txt {
+    @extend %arrow-white_right-lg;
+    @include trans(background-color);
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
+    padding: 16px 2em;
+    background-color: $colorOrange;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #fff;
+    font-feature-settings: "palt";
+    font-size: 2.2rem;
+    font-weight: bold;
+    @include mediaQueryML {
+        width: 430px;
+        font-size: 2.4rem;
+    }
+}
+
+.campaign-balloon {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 9;
+    margin-bottom: -8px;
+
+    .campaign-balloon_body {
+        display: flex;
+        position: relative;
+        padding: 1px;
+        background-color: #fff;
+        border-radius: 2px;
+        font-size: 1.4rem;
+        font-weight:500;
+        line-height: 1.3;
+        @include mediaQueryML {
+            font-size: 1.6rem;
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            margin: auto;
+            border: 8px solid transparent;
+            border-top-color: #fff;
+        }
+    }
+
+    .campaign-pr,
+    .campaign-limit {
+        padding: 6px 12px 5px;
+        font-feature-settings: "palt";
+    }
+
+    .campaign-pr {
+        color: $colorBody;
+    }
+
+    .campaign-limit {
+        background-color: #e42540;
+        border-radius: 0 2px 2px 0;
+        color: #fff;
+        display: flex;
+        align-items: center;
+    }
+}
+
+//-------------------------------------------------------------
+//  他社サービスからのお引越し手順
+//-------------------------------------------------------------
+@include mediaQueryS {
+    .transfer {
+        margin: 0 0 10px;
+        background: #d6eaba;
+        border-bottom: 1px solid #96c84d;
+
+        &_ttl {
+            padding: 10px 10px;
+            background: #8dc33c;/* Old Browsers */
+            background: linear-gradient(to bottom, #8dc33c 0, #6ab000 100%);/* W3C */
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        &_body { padding: 10px 0 20px; }
+
+        .btn {
+            display: block;
+            margin: 0 0 5px;
+
+            .ico { font-size: 16px; }
+        }
+    }
+
+}
+
+@include mediaQueryM {
+    .transfer {
+        margin: 0 0 10px;
+        background: #d6eaba;
+        text-align: center;
+
+        &_ttl {
+            padding: 10px 10px;
+            background: #8dc33c;/* Old Browsers */
+            background: linear-gradient(to bottom, #8dc33c 0, #6ab000 100%);/* W3C */
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        &_body { padding: 10px 0 20px; }
+
+        .btn {
+            margin: 0 5px;
+            padding-left: 50px;
+            padding-right: 50px;
+
+            .ico { font-size: 16px; }
+        }
+    }
+}
+
+@include mediaQueryL {
+    .transfer {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        width: 470px;
+        margin: 0 20px 0 0;
+        background: #d6eaba;
+        border: 1px solid #96c84d;
+        text-align: center;
+
+        .ie7 & { width: 458px; }
+
+        &_ttl {
+            padding: 10px 10px;
+            background: #8dc33c;/* Old Browsers */
+            background: linear-gradient(to bottom, #8dc33c 0, #6ab000 100%);/* W3C */
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        &_body { padding: 10px 10px 20px; }
+
+        .btn {
+            margin: 0 5px 5px;
+
+            .ico { font-size: 16px; }
+        }
+    }
+}
+
+//-------------------------------------------------------------
+//  ドメイン検索
+//-------------------------------------------------------------
+@include mediaQueryL {
+    .domain-search {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        width: 470px;
+        border: 2px solid #ececec;
+        text-align: center;
+
+        .ie7 & { width: 456px; }
+
+        &_ttl {
+            padding: 10px 10px;
+            background: #ececec;
+            font-weight: bold;
+        }
+
+        &_sttl {
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 11px;
+            font-weight: normal;
+        }
+
+        &_body {
+            padding: 10px;
+
+            b { font-size: 16px; }
+        }
+
+        &_input { display: inline-block; }
+
+        &_i-text { width: 140px; }
+
+        &_submit { display: inline-block; }
+    }
+}
+
+//-------------------------------------------------------------
+//  これからはじめる方へ
+//-------------------------------------------------------------
+.beginner {
+    padding: 40px 0;
+    background-color: #f8f8f8;
+    @include mediaQueryML {
+        padding: 40px 0 45px;
+    }
+
+    &__ttl {
+        @include fz-rwd(24);
+        text-align: center;
+        font-weight: bold;
+        line-height: 1;
+        position:relative;
+        display:table;
+        margin:0 auto 20px;
+        padding:0 40px;
+        &:before {
+            content:"";
+            display:block;
+            width:100%;
+            height:1px;
+            position:absolute;
+            left:0;
+            top:50%;
+            margin-top:-.5px;
+            background:#ddd;
+        }
+        span {
+            background:#f8f8f8;
+            display:inline-block;
+            padding:0 15px;
+            position: relative;
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: -10px -5px 0;
+        //max-width: 350px;
+        @include mediaQueryML {
+            max-width: 654px;// 204*3+7*6
+            margin: -14px auto 0;
+        }
+        @include mediaQueryL {
+            max-width: none;
+            margin: -14px -15px 0 0;
+        }
+        &:after {// 最終行左寄せのため
+            content: "";
+            display: block;
+            width: 50%;
+            max-width: 180px;
+            height: 0;
+            @include mediaQueryML {
+                display: none;
+            }
+        }
+    }
+
+    &__item {
+        width: 50%;
+        max-width: 180px;
+        margin-top: 10px;
+        padding: 0 5px;
+        box-sizing: border-box;
+        @include mediaQueryML {
+            max-width: none;
+            width: 204px;
+            margin: 14px 7px 0;
+            padding: 0;
+        }
+        @include mediaQueryL {
+            width: 20%;
+            margin: 14px 0 0 0;
+            padding-right: 15px;
+        }
+
+        a {
+            display: block;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

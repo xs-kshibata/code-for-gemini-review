@@ -1,0 +1,22 @@
+## No.194475 開発へ→対応依頼（メールからWebサイトアクセス分の解析用リダイレクト設定追加）
+## 上記依頼のための対応　※開発環境では動作しない
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule ^xs/(.*) https://%{HTTP_HOST}/$1?%{QUERY_STRING}&utm_source=own&utm_medium=email&utm_campaign=info_xsrv [L,R=301]
+    
+    RewriteRule ^bz/(.*) https://%{HTTP_HOST}/$1?%{QUERY_STRING}&utm_source=own&utm_medium=email&utm_campaign=info_xbiz [L,R=301]
+    
+    RewriteRule ^xd/(.*) https://%{HTTP_HOST}/$1?%{QUERY_STRING}&utm_source=own&utm_medium=email&utm_campaign=info_xdrv [L,R=301]
+    
+    RewriteRule ^dm/(.*) https://%{HTTP_HOST}/$1?%{QUERY_STRING}&utm_source=own&utm_medium=email&utm_campaign=info_xdm [L,R=301]
+    
+    RewriteRule ^wx/(.*) https://%{HTTP_HOST}/$1?%{QUERY_STRING}&utm_source=own&utm_medium=email&utm_campaign=info_wpx [L,R=301]
+    
+    RewriteRule ^sc/(.*) https://%{HTTP_HOST}/$1?%{QUERY_STRING}&utm_source=own&utm_medium=email&utm_campaign=info_six [L,R=301]
+    
+    RewriteRule ^dr/(.*) https://%{HTTP_HOST}/$1?%{QUERY_STRING}&utm_source=own&utm_medium=email&utm_campaign=info_drivee [L,R=301]
+    
+    RewriteRule ^xf/(.*) https://%{HTTP_HOST}/$1?%{QUERY_STRING}&utm_source=own&utm_medium=email&utm_campaign=info_xfree [L,R=301]
+    
+    RewriteRule ^sm/(.*) https://%{HTTP_HOST}/$1?%{QUERY_STRING}&utm_source=own&utm_medium=email&utm_campaign=system [L,R=301]
+</IfModule>
