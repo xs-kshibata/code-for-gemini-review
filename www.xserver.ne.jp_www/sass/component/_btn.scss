@@ -1,0 +1,850 @@
+//=============================================================
+//
+//  ボタン
+//
+//=============================================================
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0 5px;
+    border: none;
+    line-height: 1.4;
+    text-align: center;
+    transition: opacity .1s ease-out;
+    appearance: none;
+    position:relative;
+    box-sizing: border-box;
+    &:hover {
+        opacity: .8;
+    }
+
+    .ltie7 &,
+    .ie7 & {
+        display: inline;
+        zoom: 1;
+    }
+
+    .ie7 &,
+    .ie8 & {
+        filter: none;
+    }
+    // .ico {
+    //     position:absolute;
+    //     top:50%;
+    //     margin-top:-.5em;
+    //     right:8px;
+    // }
+    
+    .ico {
+        margin:0 0 0 5px;
+        position:relative;
+        top:-.1em;
+        right:0;
+    }
+
+    .imgico {
+        margin-left: 5px;
+    }
+}
+a.btn { text-decoration: none !important; }
+
+//-------------------------------------------------------------
+//  デフォルト - 青枠+青文字
+//-------------------------------------------------------------
+.btn_blue {
+    padding: 0.6em 1em;
+    // padding-right:calc(1em + 15px);
+    background:#fff;
+    border:2px solid $colorSub;
+    border-radius: 3px;
+    color: $colorSub !important;
+    font-weight: 500;
+
+    &:hover,&:visited { color: $colorSub; }
+    &-secondary {
+        background:$colorMain;
+        border-color:$colorMain;
+        color: #fff !important;
+        &:hover,&:visited { color: #fff; }
+    }
+    @include mediaQueryS {
+        padding:10px 12px;
+    }
+}
+button.btn_blue {
+    background:$colorMain;
+    border-color:$colorMain;
+    color: #fff !important;
+    &:hover,&:visited { color: #fff; }
+}
+
+
+
+//-------------------------------------------------------------
+//  オレンジ+白文字
+//-------------------------------------------------------------
+.btn_orange {
+    padding: 0.6em 1em;
+    // padding-right:calc(1em + 15px);
+    background: #f7790b;/* Old Browsers */
+    border-radius: 3px;
+    color: #fff !important;
+    font-weight: 500;
+    border:2px solid transparent;
+
+    .ie7 &,
+    .ie8 & { border-bottom: 2px solid #f7790b; }
+
+    &:hover,&:visited { color: #fff; }
+    &.btnbdr {
+        background:#fff;
+        border:2px solid #f7790b;
+        border-radius: 3px;
+        color: #f7790b!important;
+        &:hover,&:visited { color: #f7790b; }
+    }
+    @include mediaQueryS {
+        padding:10px 12px;
+    }
+}
+
+//-------------------------------------------------------------
+//  グレー+黒文字
+//-------------------------------------------------------------
+.btn_gray {
+    padding: 0.6em 1em;
+    // padding-right:calc(1em + 15px);
+    background: #fff;/* Old Browsers */
+    border-radius: 3px;
+    color: #333 !important;
+    border:2px solid #333;
+    font-weight: 500;
+
+    &:hover,&:visited { color: #333; }
+
+    & .ico { color: #333; }
+    @include mediaQueryS {
+        padding:10px 12px;
+    }
+}
+
+//-------------------------------------------------------------
+//  白+黒文字
+//-------------------------------------------------------------
+.btn_white {
+    padding: 0.6em 1em;
+    // padding-right:calc(1em + 15px);
+    background: #fff;/* Old Browsers */
+    border-radius: 3px;
+    color: #333 !important;
+    border:2px solid #333;
+    font-weight: 500;
+
+    &:hover,&:visited { color: #333; }
+    @include mediaQueryS {
+        padding:10px 12px;
+    }
+}
+
+
+/* 白+灰色ボーダー+黒文字 */
+.btn_white-borderd {
+    padding: 0.6em 1em;
+    // padding-right:calc(1em + 15px);
+    background: #f1f1f1;/* Old Browsers */
+    border-radius: 3px;
+    color: #333 !important;
+
+    &:hover,&:visited { color: #333; }
+
+    & .ico { color: #333; }
+    @include mediaQueryS {
+        padding:10px 12px;
+    }
+}
+
+
+//-------------------------------------------------------------
+//  オレンジ大ボタン - オレンジ+白文字
+//-------------------------------------------------------------
+.btn_orange-l {
+    @include fz-rwd(18);
+    padding: 18px;
+    // padding-right:calc(1em + 18px);
+    background: #f7790b;/* Old Browsers */
+    border-radius: 3px;
+    color: #fff !important;
+    font-weight: bold;
+
+    &:hover { color: #fff; }
+    &.btnbdr {
+        background:#fff;
+        border:2px solid #f7790b;
+        border-radius: 3px;
+        color: #f7790b!important;
+        &:hover { color: #f7790b; }
+    }
+}
+
+//-------------------------------------------------------------
+//  グレー大ボタン - グレー+黒文字
+//-------------------------------------------------------------
+.btn_gray-l {
+    @include fz-rwd(18);
+    padding: 18px;
+    // padding-right:calc(1em + 18px);
+    background: #e2e2e2;/* Old Browsers */
+    border-radius: 3px;
+    color: #333 !important;
+    font-weight: 500;
+
+    &:hover,&:visited { color: #333; }
+
+    & .ico { color: $colorMain; }
+}
+
+
+//-------------------------------------------------------------
+//  黒大ボタン - 黒+白文字
+//-------------------------------------------------------------
+.btn_black-l {
+    @include fz-rwd(18);
+    padding: 18px;
+    // padding-right:calc(1em + 18px);
+    background: #333;/* Old Browsers */
+    border-radius: 3px;
+    color: #fff !important;
+    font-weight: 500;
+
+    &:hover { color: #fff; }
+}
+
+//-------------------------------------------------------------
+//  青大ボタン - 青+白文字
+//-------------------------------------------------------------
+.btn_blue-l {
+    @include fz-rwd(18);
+    padding: 18px;
+    // padding-right:calc(1em + 18px);
+    background: $colorMain;/* Old Browsers */
+    border-radius: 3px;
+    color: #fff !important;
+    font-weight: 500;
+
+    &:hover,&:visited { color: #fff; }
+}
+.btn_blue-xl {
+    width: 350px;
+    max-width: 95%;
+    font-size: 1.8rem;
+    padding: 20px 18px;
+    // padding-right:calc(1em + 18px);
+    background: $colorMain;/* Old Browsers */
+    border-radius: 3px;
+    color: #fff !important;
+    font-weight: 500;
+
+    &:hover,&:visited { color: #fff; }
+}
+
+//-------------------------------------------------------------
+//  緑大ボタン - 緑+白文字
+//-------------------------------------------------------------
+.btn_green-l {
+    @include fz-rwd(18);
+    padding: 18px;
+    // padding-right:calc(1em + 18px);
+    background: #66bb1f;/* Old Browsers */
+    border-radius: 3px;
+    color: #fff !important;
+    font-weight: 500;
+
+    &:hover,&:visited { color: #fff; }
+}
+
+
+//-------------------------------------------------------------
+//  赤大ボタン - 赤+白文字
+//-------------------------------------------------------------
+.btn_red-l {
+    @include fz-rwd(18);
+    padding: 18px;
+    // padding-right:calc(1em + 18px);
+    background: #e42540;/* Old Browsers */
+    border-radius: 3px;
+    color: #fff !important;
+    font-weight: bold;
+
+    &:hover { color: #fff; }
+    &.btnbdr {
+        background:#fff;
+        border:2px solid #e42540;
+        border-radius: 3px;
+        color: #e42540!important;
+        &:hover { color: #e42540; }
+    }
+}
+
+
+//=============================================================
+//
+//  2022/01/11 以降 ボタン
+//
+//=============================================================
+
+//-------------------------------------------------------------
+//  ボタンラップ
+//-------------------------------------------------------------
+.buttonGroup {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px -5px 0;
+    .button {
+        margin: 10px 5px 0;
+    }
+}
+.buttonGroup {
+    &--center {
+        justify-content: center;
+    }
+    &--center-s {
+        @include mediaQueryS {
+            justify-content: center;
+        }
+    }
+    &--center-m {
+        @include mediaQueryM {
+            justify-content: center;
+        }
+    }
+    &--center-l {
+        @include mediaQueryL {
+            justify-content: center;
+        }
+    }
+}
+
+
+//-------------------------------------------------------------
+//  ボタン ベース
+//-------------------------------------------------------------
+.button {
+    @include trans(color, border, background-color);
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    padding: 0.7em 1em;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    font-feature-settings: "palt";
+    font-weight: 500;
+    line-height: 1.4;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none !important;
+    @include mediaQueryML {
+        font-size: 1.6rem;
+    }
+
+    .ico {
+        position: relative;
+        top: -0.1em;
+    }
+
+    .ico_new-window {
+        margin-right: 0;
+    }
+
+    &.noArrow {
+        @include mediaQueryM {
+            padding-right: 2em;
+            padding-left: 2em;
+        }
+        @include mediaQueryL {
+            padding-right: 2.5em;
+            padding-left: 2.5em;
+        }
+        &::after {
+            content: "";
+            display: none;
+        }
+    }
+}
+
+.button--lg {
+    padding: 0.7em 1.5em;
+    @include mediaQueryML {
+        font-size: 2rem;
+        padding: 0.8em 1.5em;
+    }
+}
+
+
+//-------------------------------------------------------------
+//  矢印
+//-------------------------------------------------------------
+%arrow-white_right {
+    //&:not(.noArrow) {
+        padding-right: 0.7em;
+        padding-left: 1em;
+        @include mediaQueryM {
+            padding-right: 2em;
+            padding-left: 2em;
+        }
+        @include mediaQueryL {
+            padding-right: 2.5em;
+            padding-left: 2.5em;
+        }
+
+        &::after {
+            @include trans(right);
+            @extend %ico;
+            content: unicode(e606);
+            display: inline-block;
+            position: relative;
+            top: -0.05em;
+            margin-left: 0.6em;
+            font-size: 95%;
+            font-weight: 500;
+            @include mediaQueryML {
+                position: absolute;
+                top: 0;
+                right: 0.5em;
+                bottom: 0;
+                height: 1em;
+                margin: auto;
+            }
+        }
+    //}
+
+    &:hover {
+        &::after {
+            @include mediaQueryML {
+                right: 0.4em;
+            }
+        }
+    }
+}
+
+%arrow-white_right-lg {
+    &::after {
+        @include trans(right);
+        @extend %ico;
+        content: unicode(e606);
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0.6em;
+        bottom: 0;
+        height: 1em;
+        margin: auto;
+        font-size: 95%;
+        font-weight: 500;
+    }
+
+    &:hover {
+        &::after {
+            right: 0.5em;
+        }
+    }
+}
+
+
+//-------------------------------------------------------------
+//  青ボタン
+//-------------------------------------------------------------
+
+// ボーダー
+//-------------------------------------------------------------
+%button01 {
+    @extend %arrow-white_right;
+    background-color: #fff;
+    border-color: $colorSub;
+    color: $colorSub;
+    &:hover {
+        background-color: #f5f9ff;
+        color: $colorSub;// overwrite
+    }
+}
+.button01 {
+    @extend %button01;
+}
+.button01--width-sm {
+    @extend %button01;
+    @extend %button--width-sm;
+}
+.button01--width-md {
+    @extend %button01;
+    @extend %button--width-md;
+}
+.button01--width-lg {
+    @extend %button01;
+    @extend %button--width-lg;
+}
+.button01--width-xl {
+    @extend %button01;
+    @extend %button--width-xl;
+}
+
+// 背景ベタ
+//-------------------------------------------------------------
+%button01--fill {
+    @extend %arrow-white_right;
+    background-color: $colorSub;
+    color: #fff;
+    &:hover {
+        background-color: $colorSubLight;
+        color: #fff;// overwrite
+    }
+}
+.button01--fill {
+    @extend %button01--fill;
+}
+.button01--fill--width-sm {
+    @extend %button01--fill;
+    @extend %button--width-sm;
+}
+.button01--fill--width-md {
+    @extend %button01--fill;
+    @extend %button--width-md;
+}
+.button01--fill--width-lg {
+    @extend %button01--fill;
+    @extend %button--width-lg;
+}
+.button01--fill--width-xl {
+    @extend %button01--fill;
+    @extend %button--width-xl;
+}
+
+
+//-------------------------------------------------------------
+//  黒ボタン
+//-------------------------------------------------------------
+
+// ボーダー
+//-------------------------------------------------------------
+%button02 {
+    @extend %arrow-white_right;
+    background-color: #fff;
+    border-color: $colorBody;
+    color: $colorBody;
+    &:hover {
+        background-color: #f5f5f5;
+        color: $colorBody;// overwrite
+    }
+}
+.button02 {
+    @extend %button02;
+}
+.button02--width-sm {
+    @extend %button02;
+    @extend %button--width-sm;
+}
+.button02--width-md {
+    @extend %button02;
+    @extend %button--width-md;
+}
+.button02--width-lg {
+    @extend %button02;
+    @extend %button--width-lg;
+}
+.button02--width-xl {
+    @extend %button02;
+    @extend %button--width-xl;
+}
+
+// 背景ベタ
+//-------------------------------------------------------------
+%button02--fill {
+    @extend %arrow-white_right;
+    background-color: $colorBody;
+    color: #fff;
+    &:hover {
+        background-color: #484c68;
+        color: #fff;// overwrite
+    }
+}
+.button02--fill {
+    @extend %button02--fill;
+}
+.button02--fill--width-sm {
+    @extend %button02--fill;
+    @extend %button--width-sm;
+}
+.button02--fill--width-md {
+    @extend %button02--fill;
+    @extend %button--width-md;
+}
+.button02--fill--width-lg {
+    @extend %button02--fill;
+    @extend %button--width-lg;
+}
+.button02--fill--width-xl {
+    @extend %button02--fill;
+    @extend %button--width-xl;
+}
+
+
+//-------------------------------------------------------------
+//  緑ボタン
+//-------------------------------------------------------------
+
+// ボーダー
+//-------------------------------------------------------------
+%button03 {
+    @extend %arrow-white_right;
+    background-color: #fff;
+    border-color: $colorGreen;
+    color: $colorGreen;
+    &:hover {
+        background-color: #f1fbe6;
+        color: $colorGreen;// overwrite
+    }
+}
+
+.button03 {
+    @extend %button03;
+}
+.button03--width-sm {
+    @extend %button03;
+    @extend %button--width-sm;
+}
+.button03--width-md {
+    @extend %button03;
+    @extend %button--width-md;
+}
+.button03--width-lg {
+    @extend %button03;
+    @extend %button--width-lg;
+}
+.button03--width-xl {
+    @extend %button03;
+    @extend %button--width-xl;
+}
+
+// 背景ベタ
+//-------------------------------------------------------------
+%button03--fill {
+    @extend %arrow-white_right;
+    background-color: $colorGreen;
+    color: #fff;
+    &:hover {
+        background-color: $colorGreenLight;
+        color: #fff;// overwrite
+    }
+}
+.button03--fill {
+    @extend %button03--fill;
+}
+.button03--fill--width-sm {
+    @extend %button03--fill;
+    @extend %button--width-sm;
+}
+.button03--fill--width-md {
+    @extend %button03--fill;
+    @extend %button--width-md;
+}
+.button03--fill--width-lg {
+    @extend %button03--fill;
+    @extend %button--width-lg;
+}
+.button03--fill--width-xl {
+    @extend %button03--fill;
+    @extend %button--width-xl;
+}
+
+
+//-------------------------------------------------------------
+//  灰色ボタン
+//-------------------------------------------------------------
+
+// ボーダー
+//-------------------------------------------------------------
+%button04 {
+    @extend %arrow-white_right;
+    background-color: #fff;
+    border: 1px solid #eee;
+    color: $colorBody;
+    &:hover {
+        background-color: #f8f8f8;
+        color: $colorBody;// overwrite
+    }
+}
+.button04 {
+    @extend %button04;
+}
+.button04--width-sm {
+    @extend %button04;
+    @extend %button--width-sm;
+}
+.button04--width-md {
+    @extend %button04;
+    @extend %button--width-md;
+}
+.button04--width-lg {
+    @extend %button04;
+    @extend %button--width-lg;
+}
+.button04--width-xl {
+    @extend %button04;
+    @extend %button--width-xl;
+}
+
+// 背景ベタ
+//-------------------------------------------------------------
+%button04--fill {
+    @extend %arrow-white_right;
+    background-color: #f1f1f1;
+    color: $colorBody;
+    &:hover {
+        background-color: #f8f8f8;
+        color: $colorBody;// overwrite
+    }
+}
+.button04--fill {
+    @extend %button04--fill;
+}
+.button04--fill--width-sm {
+    @extend %button04--fill;
+    @extend %button--width-sm;
+}
+.button04--fill--width-md {
+    @extend %button04--fill;
+    @extend %button--width-md;
+}
+.button04--fill--width-lg {
+    @extend %button04--fill;
+    @extend %button--width-lg;
+}
+.button04--fill--width-xl {
+    @extend %button04--fill;
+    @extend %button--width-xl;
+}
+
+
+//-------------------------------------------------------------
+//  オレンジボタン（CTA）
+//-------------------------------------------------------------
+%buttonCta {
+    @extend %arrow-white_right;
+    background-color: $colorOrange;
+    color: #fff;
+    &:hover {
+        //background-color: $colorOrangeDark;
+        background-color: $colorOrangeLight;
+        color: #fff;// overwrite
+    }
+    .icon {
+        color: #fff;
+    }
+}
+
+.buttonCta {
+    @extend %buttonCta;
+}
+
+.buttonCta--border {
+    @extend %arrow-white_right;
+    background-color: #fff;
+    border-color: $colorOrange;
+    color: $colorOrange;
+    &:hover {
+        background-color:$colorOrangeLight;
+        border-color: $colorOrangeLight;
+        color: #fff;// overwrite
+        .icon {
+            color: #fff;
+        }
+    }
+    .icon {
+        color: $colorOrange;
+    }
+}
+
+.buttonCta--width-xl {
+    @extend %buttonCta;
+    @extend %button--width-xl;
+}
+
+//-------------------------------------------------------------
+//  青ボタン（CTA）
+//-------------------------------------------------------------
+.buttonCta--btnblue {
+    @extend %arrow-white_right;
+    color: #fff;
+    background-color: $colorMain;
+    &:hover {
+        background-color: #2b72b5;
+        color: #fff;// overwrite
+    }
+    .icon {
+        color: #fff;
+    }
+}
+
+//-------------------------------------------------------------
+//  ブロック
+//-------------------------------------------------------------
+.button--expand {
+    display: block;
+    width: 100%;
+}
+
+.button--expand-s {
+    @include mediaQueryS {
+        display: block;
+        width: 100%;
+    }
+}
+
+.button--expand-m {
+    @include mediaQueryM {
+        display: block;
+        width: 100%;
+    }
+}
+
+.button--expand-l {
+    @include mediaQueryL {
+        display: block;
+        width: 100%;
+    }
+}
+
+//-------------------------------------------------------------
+//  幅
+//-------------------------------------------------------------
+%button--width-sm {
+    padding-right: 0.7em;
+    padding-left: 1em;
+    @include mediaQueryML {
+        padding-right: 1.8em;
+        padding-left: 1em;
+    }
+}
+
+%button--width-md {
+    min-width: 11em;// 165px÷1.5rem
+    @include mediaQueryML {
+        min-width: 12.5em;// 200px÷1.6rem
+    }
+}
+
+%button--width-lg {
+    min-width: 11em;// 165px÷1.5rem
+    @include mediaQueryML {
+        min-width: 15.625em;// 250px÷1.6rem
+    }
+}
+
+%button--width-xl {
+    min-width: 11em;// 165px÷1.5rem
+    @include mediaQueryML {
+        min-width: 18.75em;// 300px÷1.6rem
+    }
+}

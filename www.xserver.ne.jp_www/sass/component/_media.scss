@@ -1,0 +1,62 @@
+//=============================================================
+//
+//  画像付きボックス
+//
+//=============================================================
+.media {
+    clear: both;
+    *zoom: 1;
+
+    &::before,
+    &::after {
+        content: " ";
+        display: table;
+    }
+
+    &::after {
+        clear: both;
+    }
+
+    &_image {
+        float: left;
+        margin-right: 30px;
+
+        @include mediaQueryS {
+            float: none;
+            display: block;
+            margin: 0 0 20px;
+            text-align: center;
+        }
+
+        > img {
+            display: block;
+
+            @include mediaQueryS {
+                display: inline;
+            }
+        }
+
+        &_rev {
+            float: right;
+            margin-left: 30px;
+            margin-right: 0;
+
+            @include mediaQueryS {
+                float: none;
+                margin: 0 0 20px;
+            }
+        }
+    }
+
+    &_body {
+        overflow: hidden;
+
+        @include mediaQueryS {
+            overflow: visible;
+        }
+
+        > :last-child {
+            margin-bottom: 0;
+        }
+    }
+}

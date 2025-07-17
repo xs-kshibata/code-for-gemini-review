@@ -1,0 +1,233 @@
+//=============================================================
+//
+//  アイコン
+//
+//=============================================================
+@font-face {
+    font-family: 'xserver';
+    font-style: normal;
+    font-weight: normal;
+    src: url(fonts/xserver.eot?-yof791);
+    src: url(fonts/xserver.eot?#iefix-yof791) format('embedded-opentype'),
+        url(fonts/xserver.ttf?-yof791) format('truetype'),
+        url(fonts/xserver.woff?-yof791) format('woff'),
+        url(fonts/xserver.svg?-yof791#xserver) format('svg');
+    font-display: swap;
+}
+
+%ico {
+    font-family: 'xserver';
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    vertical-align: middle;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.ico {
+    @extend %ico;
+
+    &_circle:before { content: unicode(e800); }
+    &_circle-double:before { content: unicode(e814); }
+    &_circle-fill:before { content: unicode(e801); }
+    &_square:before { content: unicode(e802); }
+    &_square-fill:before { content: unicode(e803); }
+    &_exclamation:before { content: unicode(e804); }
+    &_exclamation-fill:before { content: unicode(e805); }
+    &_triangle-down:before { content: unicode(e815); }
+    &_triangle-left:before { content: unicode(e816); }
+    &_triangle-right:before { content: unicode(e817); }
+    &_triangle-up:before { content: unicode(e818); }
+    &_circle-arrow-down:before { content: unicode(e806); }
+    &_circle-arrow-left:before { content: unicode(e807); }
+    &_circle-arrow-right:before { content: unicode(e808); }
+    &_circle-arrow-up:before { content: unicode(e809); }
+    &_arrow-down:before { content: unicode(e600); }
+    &_arrow-left:before { content: unicode(e601); }
+    &_arrow-right:before { content: unicode(e602); }
+    &_arrow-up:before { content: unicode(e603); }
+    &_chevron-down:before { content: unicode(e604); }
+    &_chevron-left:before { content: unicode(e605); }
+    &_chevron-right:before { content: unicode(e606); }
+    &_chevron-up:before { content: unicode(e607); }
+    &_circle-down:before { content: unicode(e608); }
+    &_circle-left:before { content: unicode(e609); }
+    &_circle-right:before { content: unicode(e60a); }
+    &_circle-up:before { content: unicode(e60b); }
+    &_hierarchy:before { content: unicode(e624); }
+    &_check:before { content: unicode(e80f); }
+    &_cross:before { content: unicode(e60c); }
+    &_plus:before { content: unicode(e60d); }
+    &_minus:before { content: unicode(e60e); }
+    &_menu:before { content: unicode(e60f); }
+    &_list:before { content: unicode(e610); }
+    &_book:before { content: unicode(e611); }
+    &_display:before { content: unicode(e612); }
+    &_circle-check:before { content: unicode(e613); }
+    &_email:before { content: unicode(e614); }
+    &_gear:before { content: unicode(e615); }
+    &_globe:before { content: unicode(e616); }
+    &_home:before { content: unicode(e617); }
+    &_lock:before { content: unicode(e618); }
+    &_magnifier:before { content: unicode(e619); }
+    &_mouse:before { content: unicode(e61a); }
+    // &_new-window:before { content: unicode(e61b); }
+    &_operator:before { content: unicode(e61c); }
+    &_pencil:before { content: unicode(e61d); }
+    &_phone:before { content: unicode(e61e); }
+    &_refresh:before { content: unicode(e61f); }
+    &_safety:before { content: unicode(e620); }
+    &_server:before { content: unicode(e621); }
+    &_tag:before { content: unicode(e622); }
+    &_unlock:before { content: unicode(e623); }
+    &_balloon:before { content: unicode(e80a); }
+    &_balloon-q:before { content: unicode(e80b); }
+    &_balloon-a:before { content: unicode(e80c); }
+    &_square-q:before { content: unicode(e80d); }
+    &_square-a:before { content: unicode(e80e); }
+    &_q:before { content: unicode(e810); }
+    &_signature:before { content: unicode(e811); }
+    &_window:before { content: unicode(e812); }
+    &_wordpress:before { content: unicode(e813); }
+    &_square-exclamation:before { content: unicode(e900); }
+    &_square-question:before { content: unicode(e901); }
+    &_smartphone:before { content: unicode(e902); }
+    &_new-window {
+        margin-left: 6px;
+        margin-right: 3px;
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background-image: url(../img/common/ico_blank.svg);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    &_business {
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background-image: url(../img/common/ico_sitemap_corporation.svg);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+.btn_{
+    &blue,&blue-l{
+        .ico {
+            &_new-window:before { background-image:url(../img/common/ico_blank.svg);}
+        }
+    }
+    &blue,&blue-l,
+    &orange,&orange-l,
+    &red-l,
+    &green,&green-l,
+    &black,&black-l{
+        .ico {
+            &_new-window:before { background-image:url(../img/common/ico_blank_white.svg);}
+        }
+    }
+    &gray,&gray-l,
+    &white,&white-l{
+        .ico {
+            &_new-window:before { background-image:url(../img/common/ico_blank_black.svg);}
+        }
+    }
+}
+
+.support-faqmore_btn {
+    .ico_new-window {
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background-image: url(../img/common/ico_blank_white.svg);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+.button {
+    &Cta,
+    &01--fill,
+    &02--fill,
+    &03--fill {
+        .ico {
+            &_new-window:before { background-image:url(../img/common/ico_blank_white.svg); }
+        }
+    }
+    //&black,&black-l{
+    //    .ico {
+    //        &_new-window:before { background-image:url(../img/common/ico_blank_white.png);}
+    //    }
+    //}
+    //
+    //&white,&white-l {
+    //    .ico {
+    //        &_new-window:before { background-image:url(../img/common/ico_blank_bk.png);}
+    //    }
+    //}
+}
+[class*="button01--fill"],
+[class*="button02--fill"],
+[class*="button03--fill"] {
+    .ico {
+        &_new-window:before { background-image:url(../img/common/ico_blank_white.svg); }
+    }
+}
+
+//=============================================================
+//
+//  アイコン　（XACC利用分）
+//
+//=============================================================
+
+@font-face {
+    font-family: 'xacc';
+    src: url('fonts/xacc.eot?nwmjai');
+    src: url('fonts/xacc.eot?nwmjai#iefix') format('embedded-opentype'),
+    url('fonts/xacc.ttf?nwmjai') format('truetype'),
+    url('fonts/xacc.woff?nwmjai') format('woff'),
+    url('fonts/xacc.svg?nwmjai#xacc') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.ico-xacc {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'xacc' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* サービスメニュー */
+    &--menu:before {content: unicode(e90f);}
+
+    /* 契約メニュー */
+    &--list:before {content: unicode(e90c);}
+
+}
+

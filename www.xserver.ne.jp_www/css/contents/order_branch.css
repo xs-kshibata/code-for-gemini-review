@@ -1,0 +1,234 @@
+@charset "euc-jp";
+
+/*
+
+    申し込みページ(分岐、規約同意)用スタイル
+   
+*/
+
+/* =================================================================
+
+
+    レイアウト共通
+
+
+================================================================== */
+body { background: url(../../img/common/bg_border.png); }
+
+/* ----------------------------------------------------------
+    申し込み / .order
+------------------------------------------------------------- */
+.order {
+    background: #fff;
+    -webkit-box-shadow: 0 0 2px #999;
+    -moz-box-shadow: 0 0 2px #999;
+    box-shadow: 0 0 2px #999;
+}
+
+.order_header {
+    margin-bottom: 10px;
+    padding: 25px 20px 0;
+}
+
+.order_logo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.order_ttl {
+    padding: 10px 20px;
+    background: #fff;/* Old Browsers */
+    background: -moz-linear-gradient(top, #fff 0, #d8d8d8 100%); /* FF3.6+ */
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #fff), color-stop(100%, #d8d8d8));/* Chrome, Safari4+ */
+    background: -webkit-linear-gradient(top, #fff 0, #d8d8d8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fff 0, #d8d8d8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fff 0, #d8d8d8 100%); /* IE 10+ */
+    background: linear-gradient(to bottom, #fff 0, #d8d8d8 100%);/* W3C */
+    border: 1px solid #ebebeb;
+    font-size: 16px;
+    text-shadow: 0 1px 0 #fff;
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#d8d8d8', GradientType=0 );/* IE6-9 */
+}
+
+.order_body {
+    margin-bottom: 50px;
+    padding: 0 40px;
+}
+.order_body > :last-child { margin-bottom: 0; }
+
+.order_footer {
+    padding: 35px 10px 10px;
+    border-top: 1px solid #ccc;
+    color: #b5c3d0;
+    text-align: center;
+}
+.order_footer > :last-child { margin-bottom: 0; }
+
+/* ----------------------------------------------------------
+    分岐ボタン / .branch
+------------------------------------------------------------- */
+.branch {
+    padding: 20px 20px 30px;
+    background: #fff;/* Old Browsers */
+    background: -moz-linear-gradient(top, #f1f1f1 0, #fff 100%); /* FF3.6+ */
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #f1f1f1), color-stop(100%, #fff));/* Chrome, Safari4+ */
+    background: -webkit-linear-gradient(top, #f1f1f1 0, #fff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f1f1f1 0, #fff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f1f1f1 0, #fff 100%); /* IE 10+ */
+    background: linear-gradient(to bottom, #f1f1f1 0, #fff 100%);/* W3C */
+    border: 1px solid #ccc;
+    text-align: center;
+    -webkit-box-shadow: inset 0 0 0 1px #fff;
+    -moz-box-shadow: inset 0 0 0 1px #fff;
+    box-shadow: inset 0 0 0 1px #fff;
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#fff', GradientType=0 );/* IE6-9 */
+}
+.branch > :last-child { margin-bottom: 0; }
+
+.branch_ttl {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.branch_text { font-size: 12px; }
+
+.branch_btn {}
+.branch_btn .btn {}
+
+/* ----------------------------------------------------------
+    ドキュメント / .document
+------------------------------------------------------------- */
+.document {
+    width: 100%;
+    padding: 12px 15px;
+    line-height: 1.6;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+}
+.document:focus { 
+    outline: none;
+    border:1px solid #ddd;
+}
+
+
+/* =================================================================
+
+
+    スマートフォン想定(0px-767px)
+
+
+================================================================== */
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    
+    body { padding: 10px 0; }
+    
+    /* ----------------------------------------------------------
+        [SP] 申し込み / .order
+    ------------------------------------------------------------- */
+    .order_header { padding: 10px 10px 0; }
+    
+    .order_logo { margin-bottom: 10px; }
+    .order_logo img {
+        width: 105px;
+        height: 20px;
+    }
+    
+    .order_ttl { padding: 10px; }
+    
+    .order_body { padding: 0 10px; }
+    
+    /* ----------------------------------------------------------
+        [SP] 分岐ボタン / .branch
+    ------------------------------------------------------------- */
+    .branch { margin-bottom: 10px; }
+    
+    /* ----------------------------------------------------------
+        [SP] ドキュメント / .document
+    ------------------------------------------------------------- */
+    .document { height: 200px; }
+}
+
+
+/* =================================================================
+
+
+    タブレット想定(768px-969px)
+
+
+================================================================== */
+@media only screen and (min-width: 768px) and (max-width: 969px) {
+    
+    body { padding: 20px 0; }
+    
+    /* ----------------------------------------------------------
+        [Tablet] 分岐ボタン / .branch
+    ------------------------------------------------------------- */
+    .branch { margin-bottom: 10px; }
+    
+    /* ----------------------------------------------------------
+        [Tablet] ドキュメント / .document
+    ------------------------------------------------------------- */
+    .document { height: 300px; }
+}
+
+
+/* =================================================================
+
+
+    PC想定(970px-)
+
+
+================================================================== */
+@media only screen and (min-width: 970px) {
+    
+    body { padding: 25px 0; }
+    
+    .label_order-blanch { background: transparent url(../../img/order/labels_branch.png) no-repeat; }
+    
+    
+    /* ----------------------------------------------------------
+        [PC] 分岐ボタン / .branch
+    ------------------------------------------------------------- */
+    .branch { width: 385px; }
+    
+    .branch_left { float: left; }
+    .branch_right { float: right; }
+    
+    .branch_btn .btn { width: 260px; }
+    
+    .label_order-blanch_ttl_beginner{
+        width: 333px;
+        height: 20px;
+    }
+    .label_order-blanch_ttl_user{
+        width: 350px;
+        height: 20px;
+        background-position: 0 -30px;
+    }
+    .label_order-blanch_btn_order{
+        width: 162px;
+        height: 23px;
+        margin: 10px 0;
+        background-position: 0 -60px;
+    }
+    .label_order-blanch_btn_login{
+        width: 100px;
+        height: 23px;
+        margin: 10px 0;
+        background-position: 0 -90px;
+    }
+    
+    .label_order-blanch_btn_agreement{
+        width: 98px;
+        height: 22px;
+        margin: 10px 0;
+        background-position: 0 -120px;
+    }
+    
+    /* ----------------------------------------------------------
+        [PC] ドキュメント / .document
+    ------------------------------------------------------------- */
+    .document { height: 400px; }
+}

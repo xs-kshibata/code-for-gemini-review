@@ -1,0 +1,40 @@
+@charset "euc-jp";
+
+// =============================================================
+//
+//   ミックスイン
+//
+// =============================================================
+
+// -------------------------------------------------------------
+//   メディアクエリ
+// -------------------------------------------------------------
+@mixin mediaQueryS {
+    @media #{$breakpointS} {
+        @content;
+    }
+}
+
+@mixin mediaQueryM {
+    @media #{$breakpointM} {
+        @content;
+    }
+}
+
+@mixin mediaQueryL {
+    @media #{$breakpointL} {
+        @content;
+    }
+}
+
+@mixin mediaQuerySM {
+    @media #{$breakpointSM} {
+        @content;
+    }
+}
+
+@mixin mediaQueryML {
+    @media #{$breakpointML} {
+        @content;
+    }
+}

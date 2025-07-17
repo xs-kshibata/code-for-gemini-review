@@ -1,0 +1,3 @@
+<Files ~ "^(a8-festival\.pdf|a8-material\.zip)$">
+ Deny from all
+</Files>

@@ -1,0 +1,7 @@
+User-Agent:*
+Disallow:/searcher/
+Disallow:/opinion/
+Disallow:/*.pdf$
+Disallow:/blog/search.php
+Disallow:/bizhp/search.php
+Sitemap:https://www.xserver.ne.jp/sitemap.xml

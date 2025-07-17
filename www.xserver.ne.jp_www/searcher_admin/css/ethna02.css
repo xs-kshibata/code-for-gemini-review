@@ -1,0 +1,133 @@
+﻿* {
+	margin : 0 ;
+	padding : 0 ;
+	font-size : 100% ;
+}
+
+body {
+	font-size : 75% ;
+	text-align : center ;
+	line-height : 1.4 ;
+}
+
+ul, li {
+	list-style : none ;
+}
+
+#contents {
+	width : 900px ;
+	margin : 20px auto ;
+}
+
+#navi {
+	width : 120px ;
+	float : left ;
+	margin-bottom : 30px ;
+	text-align : left ;
+}
+
+#main {
+	width : 760px ;
+	float : right ;
+	margin : 0 0 30px 20px ;
+	text-align : left ;
+}
+
+#main h2 {
+	font-size : 135%;
+	padding : 8px 5px;
+	background-color: #f7b8b1;
+	margin : 0 0 15px 0;
+	color : #fff;
+}
+
+#main p {
+	margin : 0 0 10px 0 ;
+}
+
+#main select {
+	margin : 0 5px 10px 0 ;
+}
+
+#main_menu {
+	margin-bottom : 30px ;
+}
+
+#main_menu li {
+	padding : 8px 8px 8px 5px ;
+	border-bottom : 1px solid #ccc ;
+}
+
+#sub_menu li {
+	padding : 8px 8px 8px 5px ;
+	border-bottom : 1px solid #ccc ;
+}
+
+#main input {
+	margin : 0 5px 10px 0 ;
+	padding : 2px 3px ;
+}
+
+#main ul {
+	border-left : 1px solid #ccc ;
+}
+
+#main li {
+	display : inline ;
+	border-right : 1px solid #ccc ;
+	padding : 3px 10px ;
+}
+
+table {
+	border-collapse:collapse;
+    border: 1px solid #cee6e6;
+	margin : 0 0 10px 0 ;
+	width : 100% ;
+}
+
+th {
+	background: #eee;
+	border: 1px solid #b3b3b3;
+	padding : 8px;
+}
+
+td {
+    border: 1px solid #b3b3b3;
+    vertical-align: top;
+    padding : 8px;
+}
+
+
+span.ethna-error {
+    color: #ff0000;
+}
+
+#navi-global {
+    width: 580px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navi-global-item {
+    width: 116px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-size: 80%;
+    color: #333;
+    text-align: center;
+    background: #eee;
+}
+
+.navi-global-link {
+    text-decoration: none;
+    color: #3333cc;
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.navi-global-link:hover {
+    background: #3333cc;
+    color: #eee;
+}

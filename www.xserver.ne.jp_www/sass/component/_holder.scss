@@ -1,0 +1,83 @@
+//=============================================================
+//
+//  幅、余白確保ボックス
+//
+//=============================================================
+.holder-s {
+    @include mediaQueryS {
+        width: 93.75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.holder-m {
+    @include mediaQueryM {
+        width: 94.79%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.holder-l {
+    @include mediaQueryL {
+        // width: $widthPC;
+        max-width:1080px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.holder-xl {
+    @include mediaQueryL {
+        // width: $widthPC;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.holder-sm {
+    @extend .holder-s;
+    @extend .holder-m;
+}
+
+.holder-sl {
+    @extend .holder-s;
+    @extend .holder-l;
+}
+
+.holder-ml {
+    @extend .holder-m;
+    @extend .holder-l;
+}
+
+.holder-sml {
+    @extend .holder-s;
+    @extend .holder-m;
+    @extend .holder-l;
+}
+
+.holder-smlxl {
+    @extend .holder-s;
+    @extend .holder-m;
+    @extend .holder-l;
+    @extend .holder-xl;
+}
+
+// .main.holder-sml {
+//     @include mediaQueryS {
+//         width: 93.75%;
+//         margin-left: auto;
+//         margin-right: auto;
+//     }
+//     @include mediaQueryM {
+//         width: 94.79%;
+//         margin-left: auto;
+//         margin-right: auto;
+//     }
+//     @include mediaQueryL {
+//         width:auto;
+//     }
+
+// }

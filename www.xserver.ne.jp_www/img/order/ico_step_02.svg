@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-f4d63fc2-6ada-4fd5-a163-17fb77992870" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" width="23" height="22.99975" viewBox="0 0 23 22.99975">
+  <defs>
+    <style>
+      .uuid-7b1329af-f4e3-413e-912f-6e50d748c81f {
+        fill: #286ed3;
+      }
+    </style>
+  </defs>
+  <g id="uuid-782a67ca-9fbe-4a17-b97b-9b464b4c6fc2" data-name="2">
+    <g>
+      <path class="uuid-7b1329af-f4e3-413e-912f-6e50d748c81f" d="M22.21653,2.50534l-1.72248-1.72176c-1.04457-1.04497-2.73866-1.04457-3.78359,0l-1.6117,1.6117,5.50575,5.50575,1.61206-1.6117c1.04457-1.04497,1.04457-2.73866-.00004-3.78399Z"/>
+      <polygon class="uuid-7b1329af-f4e3-413e-912f-6e50d748c81f" points="0 17.494 0 22.99975 5.50611 22.99975 19.10282 9.40264 13.59743 3.89688 0 17.494"/>
+    </g>
+  </g>
+</svg>

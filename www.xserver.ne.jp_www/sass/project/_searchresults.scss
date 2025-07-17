@@ -1,0 +1,289 @@
+//=============================================================
+//
+//  検索結果
+//
+//=============================================================
+
+//=============================================================
+//  検索フォーム
+//=============================================================
+
+.search-box table.gsc-search-box {
+    position: relative;
+}
+
+.search-box td.gsc-search-button {
+    position: absolute;
+
+    @include mediaQueryS {
+        right: 0!important;
+        left: 0!important;
+        width: 100%!important;
+        bottom: -55px!important;
+    }
+}
+
+.search-box #gs_tti51 .gsc-input {
+    position: relative!important;
+    box-sizing: border-box!important;
+    width: 100%!important;
+    border: none!important;
+    box-shadow: none!important;
+    padding: 5px 10px!important;
+    background: #fff!important;
+    border-radius: 3px!important;
+    font-size: 1.5rem!important;
+
+    @include mediaQueryML {
+        height: 44px!important;
+    }
+
+    @include mediaQueryS {
+        height: 36px!important;
+    }
+}
+
+#gsc-i-id2:focus {
+    outline: 2px solid #0c0d0d!important;
+}
+
+.search-box #gs_tti51 {
+    @include mediaQueryL {
+        padding-right: 10px!important;
+    }
+}
+
+.search-box #___gcse_1 {
+
+    @include mediaQuerySM {
+        width: 100%!important;
+    }
+
+    * {
+        font-size: 1.55rem!important;
+        font-family: Roboto ,"Noto Sans JP", "Helvetica Neue", Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif!important;
+    }
+}
+
+.gsib_b {
+    display: none!important;
+}
+
+.search-box form.gsc-search-box ,.search-box table.gsc-search-box {
+    margin-bottom: 0!important;
+}
+.search-box .gsc-search-button.gsc-search-button-v2 {
+    cursor: pointer!important;
+    display: inline-block!important;
+    box-sizing: border-box!important;
+    height: 44px!important;
+    font-size: 16px!important;
+    font-weight: bold!important;
+    text-align: center!important;
+    color: #fff!important;
+    border: none!important;
+    border-radius: 3px!important;
+    background-color: #1b63a7!important;
+    padding: 0.6em 1em!important;
+    line-height: 1.4!important;
+    transition: opacity .1s ease-out!important;
+
+    @include mediaQueryML {
+        width: 115px!important;
+    }
+
+    @include mediaQuerySM {
+        width: 100%!important;
+    }
+
+    &:hover {
+        opacity: 0.8!important;
+    }
+
+    &::before {
+        display: inline;
+        font-family: inherit;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        white-space: nowrap;
+        content: "検索する";
+        color: #ffffff;
+    }
+}
+
+.search-box .gsc-input-box {
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+}
+
+//=============================================================
+//  検索結果一覧
+//=============================================================
+
+.gsc-control-cse * {
+    font-size: 1.55rem!important;
+    font-family: Roboto ,"Noto Sans JP", "Helvetica Neue", Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif!important;
+}
+
+div.gs-title {
+    margin: 0 0 10px;
+}
+div.gs-bidi-start-align.gs-snippet {
+    margin: 0 0 15px;
+}
+
+a.gs-title {
+    color: #286ed3!important;
+    text-decoration: underline!important;
+    font-weight: bold!important;
+    font-size: 1.8rem!important;
+
+    b {
+        color: #286ed3!important;
+        font-size: 1.8rem!important;
+    }
+
+    &:hover {
+        color: #818181!important;
+        text-decoration: underline!important;
+        b {
+            color: #818181!important;
+            text-decoration: underline!important;
+        }
+    }
+    &.active {
+        color: #818181!important;
+        text-decoration: underline!important;
+        b {
+            color: #818181!important;
+            text-decoration: underline!important;
+        }
+    }
+}
+
+.gsc-refinementHeader.gsc-inline-block {
+    font-weight: 500!important;
+    color: #2f334c!important;
+    transition: border-bottom-width 0.2s ease-out;
+    border-bottom: 0;
+
+    &:hover {
+        border-bottom: 3px solid #286ed3!important;
+        color: #286ed3!important;
+    }
+}
+
+.gsc-refinementHeader.gsc-refinementhInactive {
+    padding-bottom: 0!important;
+}
+
+.gsc-refinementHeader.gsc-inline-block.gsc-refinementhActive {
+    border-bottom: 3px solid #286ed3;
+    color: #286ed3!important;
+    padding-bottom: 0!important;
+}
+
+.gsc-selected-option-container.gsc-inline-block {
+    font-weight: 500!important;
+}
+
+.gs-visibleUrl {
+    color: #999!important;
+    margin: 0 0 10px;
+
+    span {
+        font-size: 14px!important;
+    }
+}
+
+.gsc-results .gsc-cursor-box {
+    text-align: center!important;
+}
+
+.gsc-cursor {
+    display: inline-flex!important;
+
+    .gsc-cursor-page {
+        width: 32px!important;
+        height: 32px!important;
+        line-height: 32px!important;
+        padding: 0!important;
+        margin-right: 10px!important;
+        border: 2px solid #ddd!important;
+        background: #ffffff!important;
+        color: #2f334c!important;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        font-weight: 500!important;
+
+        &:hover{
+            text-decoration: none!important;
+            border: 2px solid $colorMain!important;
+            color: $colorMain!important;
+        }
+
+        &.gsc-cursor-current-page {
+            border: 2px solid $colorMain!important;
+            background: $colorMain!important;
+            color: #fff!important;
+            font-weight: bold!important;
+        }
+    }
+}
+
+.search-results {
+    margin: 0 0 30px;
+
+    &_list {
+        margin: 0 0 2em 2em;
+        list-style: decimal outside;
+
+        > li {
+            margin-bottom: 2em;
+        }
+    }
+
+    &_ttl {
+        margin-bottom: .7em;
+    }
+
+    &_body {
+        margin-bottom: .7em;
+    }
+
+    &_bottom {
+        @include mediaQueryL {
+            clear: both;
+            *zoom: 1;
+        }
+
+        &::before {
+            @include mediaQueryL {
+                content: " ";
+                display: table;
+            }
+        }
+
+        &::after {
+            @include mediaQueryL {
+                content: " ";
+                display: table;
+                clear: both;
+            }
+        }
+
+        &_url {
+            @include mediaQueryL {
+                float : left;
+            }
+        }
+
+        &_words {
+            @include mediaQueryL {
+                overflow: hidden;
+                text-align: right;
+            }
+        }
+    }
+}

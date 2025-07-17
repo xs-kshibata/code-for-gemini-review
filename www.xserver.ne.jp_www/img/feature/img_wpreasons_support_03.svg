@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g id="img_wpreasons_support_03" transform="translate(-0.016 -15.293)">
+    <rect id="長方形_10741" data-name="長方形 10741" width="100" height="100" transform="translate(0.016 15.293)" fill="#fff"/>
+    <g id="グループ_192" data-name="グループ 192" transform="translate(9.976 28.73)">
+      <g id="グループ_189" data-name="グループ 189" transform="translate(13.635)">
+        <path id="パス_317" data-name="パス 317" d="M771.463,1437.837v14.516H823.9v-14.516Zm12.906,4.88H781.79v7.013h-1.735v-7.013h-2.544v-1.4h6.857Zm8.195,7.013h-1.735v-3.607h-3.382v3.607h-1.734v-8.418h1.734v3.411h3.382v-3.411h1.735Zm7.513,0h-5.643v-8.418h5.631v1.4h-3.9v2.006h3.33v1.359h-3.33v2.255h3.908Zm10.23,0h-1.741v-2.3l.173-3.973-2.272,6.273h-1.192l-2.266-6.267.173,3.967v2.3h-1.735v-8.418h2.267l2.162,6.105,2.151-6.105h2.278Zm7.512,0h-5.642v-8.418h5.631v1.4h-3.9v2.006h3.331v1.359H813.91v2.255h3.908Z" transform="translate(-771.463 -1437.837)" fill="#26a4d4"/>
+        <path id="パス_318" data-name="パス 318" d="M802.034,1457.537,804.39,1455h-4.712Z" transform="translate(-775.815 -1440.484)" fill="#26a4d4"/>
+      </g>
+      <g id="グループ_191" data-name="グループ 191" transform="translate(0 16.981)">
+        <g id="グループ_190" data-name="グループ 190">
+          <path id="パス_319" data-name="パス 319" d="M797.91,1457.915l-2.715,2.609-2.714-2.609h-37.14V1513.9h79.708v-55.985Zm32.4,2.846a1.9,1.9,0,1,1-1.9,1.9A1.9,1.9,0,0,1,830.305,1460.761Zm-6.643,0a1.9,1.9,0,1,1-1.9,1.9A1.9,1.9,0,0,1,823.663,1460.761Zm-6.643,0a1.9,1.9,0,1,1-1.9,1.9A1.9,1.9,0,0,1,817.02,1460.761ZM833.152,1512H757.239v-44.6h75.913Z" transform="translate(-755.341 -1457.915)" fill="#2468cb"/>
+          <rect id="長方形_36" data-name="長方形 36" width="26.054" height="2.847" transform="translate(6.643 34.635)" fill="#2468cb"/>
+          <rect id="長方形_37" data-name="長方形 37" width="16.915" height="2.847" transform="translate(35.234 34.635)" fill="#2468cb"/>
+          <rect id="長方形_38" data-name="長方形 38" width="26.054" height="2.847" transform="translate(6.643 45.63)" fill="#2468cb"/>
+          <rect id="長方形_39" data-name="長方形 39" width="16.915" height="2.847" transform="translate(35.234 45.63)" fill="#2468cb"/>
+          <rect id="長方形_40" data-name="長方形 40" width="26.054" height="2.847" transform="translate(52.149 42.979) rotate(180)" fill="#2468cb"/>
+          <rect id="長方形_41" data-name="長方形 41" width="16.915" height="2.847" transform="translate(23.558 42.979) rotate(180)" fill="#2468cb"/>
+          <rect id="長方形_42" data-name="長方形 42" width="45.3" height="17.029" transform="translate(6.849 14.336)" fill="#26a4d4"/>
+          <rect id="長方形_43" data-name="長方形 43" width="17.534" height="10.263" transform="translate(55.532 38.131)" fill="#d9eef7"/>
+          <rect id="長方形_44" data-name="長方形 44" width="17.534" height="10.263" transform="translate(55.532 26.291)" fill="#d9eef7"/>
+          <rect id="長方形_45" data-name="長方形 45" width="17.534" height="10.263" transform="translate(55.532 14.45)" fill="#d9eef7"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
