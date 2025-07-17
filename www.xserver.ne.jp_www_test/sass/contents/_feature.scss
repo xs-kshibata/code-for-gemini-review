@@ -2481,7 +2481,6 @@ a.func-unit_inner {
     }
 }
 
-
 //-------------------------------------------------------------
 // 特長01 - WordPress運営に強い
 //-------------------------------------------------------------
@@ -2490,60 +2489,6 @@ a.func-unit_inner {
     .button {
         @include mediaQueryS {
             width: 100%;
-        }
-    }
-    .wpreasonsShare {
-        padding: 0 64px 60px;
-        box-sizing: border-box;
-
-        @include mediaQueryS {
-            padding: 0 16px 32px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        &__note {
-            color: #2f334c;
-            font-size: 12px;
-            position: relative;
-            text-indent: -1em;
-            text-align: center;
-            @include mediaQueryS {
-                text-align: left;
-            }
-        }
-        &__body {
-            display: flex;
-            align-items: center;
-            margin-bottom: 24px;
-
-            @include mediaQueryML {
-                justify-content: center;
-                gap: 48px;
-            }
-
-            @include mediaQueryS {
-                flex-direction: column;
-                gap: 24px;
-            }
-
-            &__img {
-                &--no1 {
-                    @include mediaQueryS {
-                        max-width: 240px;
-                        margin: 0 23%;
-                    }
-                }
-
-                &--graph {
-                    @include mediaQueryS {
-                        max-width: 400px;
-                        margin-left: 11%;
-                    }
-                }
-            }
         }
     }
 }
@@ -2595,6 +2540,61 @@ a.func-unit_inner {
         }
         strong {
             color: #ff5400;
+        }
+    }
+}
+
+.wpResult {
+    padding: 0 64px 60px;
+    box-sizing: border-box;
+
+    @include mediaQueryS {
+        padding: 0 16px 32px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    &__note {
+        color: #2f334c;
+        font-size: 12px;
+        position: relative;
+        text-indent: -1em;
+        text-align: center;
+        @include mediaQueryS {
+            text-align: left;
+        }
+    }
+    &__body {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+
+        @include mediaQueryML {
+            justify-content: center;
+            gap: 48px;
+        }
+
+        @include mediaQueryS {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &__img {
+            &--no1 {
+                @include mediaQueryS {
+                    max-width: 240px;
+                    margin: 0 23%;
+                }
+            }
+
+            &--graph {
+                @include mediaQueryS {
+                    max-width: 400px;
+                    margin-left: 11%;
+                }
+            }
         }
     }
 }
@@ -4579,43 +4579,52 @@ a.fea-unit_inner {
             margin-top: 10px;
             text-align: right;
         }
-
     }
 
     &Backbone {
-        .ft01Backbone__img{
-            @include mediaQueryM {
-                margin-top: 0;
-                width: 48%;
-            }
-            @include mediaQueryL {
-                width: 48%;
-                padding: 0 40px 0 0;
-                margin-top: -13px;
-            }
-            img {
+        .feature {
+            &__item {
+                align-items: start;
+                @include mediaQueryM {
+                    align-items: center;
+                }
                 @include mediaQueryS {
-                    width: 100%;
+                    align-items: unset;
+                }
+
+                &__txtCont {
+                }
+
+                &__txt {
+                    &:nth-child(2) {
+                        margin-top: 16px;
+                    }
+                }
+
+                &__img {
+                    width: 48%;
+                    max-width: 470px;
+                    padding: 0;
+                    margin: -25px 50px -15px -13px;
+                    @include mediaQueryM {
+                        margin-right: 3.90625vw;
+                    }
+                    @include mediaQueryS {
+                        margin: 0 auto -6px;
+                        width: 100%;
+                    }
+
+                    img {
+                        max-width: 100%;
+                        width: unset;
+                        height: auto;
+                        display: block;
+                    }
                 }
             }
+
         }
-        .feature__item__txtCont{
-            width: 52%;
-        }
-        .feature__item__txt{
-            &:nth-child(2){
-                    margin-top: 16px;
-            }
-        }
-        &__item {
-            align-items: start;
-            @include mediaQueryS {
-                align-items: unset;
-            }
-            @include mediaQueryM {
-                align-items: center;
-            }
-        }
+
     }
 }
 

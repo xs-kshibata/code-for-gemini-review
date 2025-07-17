@@ -151,7 +151,9 @@
                         </div>
                         <div class="reason-card__visuals" id="visuals-01">
                             <a href="#number1">
-                                <img src="img/top/reason_wp_l.png?date=250716" class="srcset" alt="WordPress運営に強い ビジュアル">
+                                <figure class="reason-card__img">
+                                    <img src="img/top/reason_wp_l.png?date=250716" class="srcset" alt="WordPress運営に強い ビジュアル">
+                                </figure>
                             </a>
                         </div>
                     </div>
@@ -180,7 +182,9 @@
                         </div>
                         <div class="reason-card__visuals" id="visuals-02">
                             <a href="#number1">
-                                <img src="img/top/reason_server_l.png?date=250716" class="srcset" alt="超速サーバー環境 ビジュアル">
+                                <figure class="reason-card__img">
+                                    <img src="img/top/reason_server_l.png?date=250716" class="srcset"　alt="超速サーバー環境 ビジュアル">
+                                </figure>
                             </a>
                         </div>
                     </div>
@@ -206,7 +210,9 @@
                             </div>
                         </div>
                         <div class="reason-card__visuals" id="visuals-03">
-                            <img src="img/top/reason_func_l.png?date=250716" class="srcset" alt="便利な独自機能 ビジュアル">
+                            <figure class="reason-card__img">
+                                <img src="img/top/reason_func_l.png?date=250716" class="srcset" alt="便利な独自機能 ビジュアル">
+                            </figure>
                         </div>
                     </div>
 
@@ -230,7 +236,9 @@
                             </div>
                         </div>
                         <div class="reason-card__visuals" id="visuals-04">
-                            <img  src="img/top/reason_sup_l.png?date=250716" class="srcset" alt="運用実績とサポート ビジュアル">
+                            <figure class="reason-card__img">
+                              <img  src="img/top/reason_sup_l.png?date=250716" class="srcset" alt="運用実績とサポート ビジュアル">
+                            </figure>
                         </div>
                     </div>
                 </div>

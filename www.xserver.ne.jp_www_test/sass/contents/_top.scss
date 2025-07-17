@@ -1473,12 +1473,10 @@ sup {
     }
     &__body {
         margin: 0 16px 65px;
-        @include mediaQuerySM {
-            margin: 0 0 65px;
+        @include mediaQueryS {
+            margin: 0 0 40px;
         }
     }
-
-
     &__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1488,23 +1486,19 @@ sup {
             grid-template-columns: 1fr;
         }
     }
-
     &__footer {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 10px 8px;
         margin-top: 50px;
-
         @include mediaQueryML {
             justify-content: center;
             gap: 16px;
         }
-
         .button {
             flex: 1;
             min-width: 250px;
-
             @include mediaQueryML {
                 flex: 0 1 320px;
             }
@@ -1518,12 +1512,10 @@ sup {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: space-between;
-
     @include mediaQuerySM {
         flex-direction: column;
         align-items: center;
     }
-
     &__label {
         display: flex;
         flex-direction: column;
@@ -1535,7 +1527,6 @@ sup {
         box-sizing: border-box;
         padding: 34px 14px 0px;
         margin-left: 24px;
-
         @include mediaQueryS {
             flex-direction: row;
             align-items: baseline;
@@ -1543,13 +1534,11 @@ sup {
             margin: 0 auto;
         }
     }
-
     &__txt {
         font-size: 12px;
         font-weight: 500;
         line-height: 1;
     }
-
     &__number {
         font-size: 54px;
         font-weight: 700;
@@ -1558,7 +1547,6 @@ sup {
         position: relative;
         margin-top: -4px;
         top: 9px;
-
         @include mediaQueryS {
             font-size: 38px;
             border-top: none;
@@ -1574,11 +1562,8 @@ sup {
     &__main {
         width: 100%;
     }
-
     &__content {
         margin:  20px 0 40px 40px;
-
-
         @include mediaQueryM{
             margin:  20px 24px 24px;
         }
@@ -1586,27 +1571,17 @@ sup {
             margin: 20px 16px 24px;
         }
     }
-
     &__title {
         font-size: 30px;
         color: #2f334c;
         font-weight: 700;
         margin: 0 0 20px 0;
-
         @include mediaQueryS {
             margin: 0 0 16px 0;
             text-align: center;
             font-size: 26px;
         }
     }
-
-    &__details {
-
-        @include mediaQueryS {
-
-        }
-    }
-
     &__visuals {
         background-color: #f3f7fa;
         border-radius: 0 3px 3px 0;
@@ -1616,29 +1591,29 @@ sup {
         flex: 0 0 200px;
         align-self: stretch;
         padding: 8px;
-        margin: 8px;
+        margin: 8px 16px 16px 16px;
         box-sizing: border-box;
         @include mediaQueryM {
             margin-top: 0;
             padding: 16px;
         }
         @include mediaQueryS {
-            flex: 0 0 160px;
+            flex: 0 0 auto;
             margin-top: 0;
-            padding: 8px;
+            padding: 16px;
+            min-height: 160px;
         }
-
         img {
             max-width: 100%;
             height: auto;
-            object-fit: contain;
-            @include mediaQuerySM {
-                width: 100%;
-            }
+        }
+    }
+    &__img {
+        @include mediaQueryS {
+         max-width: 400px;
         }
     }
 }
-
 .reason-card__feature-list {
     list-style: none;
     padding: 0;
@@ -1649,13 +1624,11 @@ sup {
     font-size: 13px;
     color: #333;
     font-weight: 500;
-
     br {
         @include mediaQuerySM {
             display: none;
         }
     }
-
     li {
         padding-inline-start: 24px;
         position: relative;
@@ -1670,12 +1643,10 @@ sup {
             background: url(../img/top/check.svg) no-repeat center center / contain;
         }
     }
-
     .highlight {
         color: #286ed3;
     }
 }
-
 .more-link {
     font-size: 14px;
     font-weight: 700;
@@ -1689,7 +1660,6 @@ sup {
         text-align: center;
     }
 }
-
 .cta__btnContainer{
     display: flex;
     flex-wrap: wrap;
@@ -1698,8 +1668,6 @@ sup {
     @include mediaQueryML {
         justify-content: center;
     }
-
-
     .button {
         flex: auto;
         margin: 10px 8px 0;
@@ -1715,16 +1683,13 @@ sup {
         }
     }
 }
-
 .cta__btnWrap {
     text-align: center;
     position: relative;
-
     @include mediaQueryS {
         width: 100%;
     }
 }
-
 .campaignBalloon {
     position: absolute;
     top: -22px;
@@ -1740,8 +1705,35 @@ sup {
     border-radius: 3px;
     font-weight: 600;
     font-size: 13px;
+
     @include mediaQueryS {
         top: -12px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #ea2803;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #fff;
     }
 }
 
@@ -1757,32 +1749,6 @@ sup {
     color: #fff;
     line-height: 24px;
     text-align: center;
-}
-
-.campaignBalloon:before {
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid #ea2803;
-}
-
-.campaignBalloon:after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid #fff;
 }
 
 //-------------------------------------------------------------

@@ -58,16 +58,16 @@
                         <span class="featureSec__ttl__elm">WordPress運営に強い</span>
                     </h3>
                     <div class="ftWpIntro">
-                        <div class="wpreasonsShare">
-                            <div class="wpreasonsShare__body">
-                                <figure class="wpreasonsShare__body__img wpreasonsShare__body__img--no1">
-                                    <img src="../img/feature/img_wpreasons_share_01.svg?date=250716" width="274" height="223" alt="日本国内のWordPressサイトシェアNO.1 圧倒的シェア率34.6%">
+                        <div class="wpResult">
+                            <div class="wpResult__body">
+                                <figure class="wpResult__body__img wpResult__body__img--no1">
+                                    <img src="../img/feature/img_wpResult_01.svg?date=250716" width="274" height="223" alt="日本国内のWordPressサイトシェアNO.1 圧倒的シェア率34.6%">
                                 </figure>
-                                <figure class="wpreasonsShare__body__img wpreasonsShare__body__img--graph">
-                                    <img src="../img/feature/img_wpreasons_share_02.svg?date=250716" width="365" height="269" alt="国内のWordPressサイトシェアにおいて、XServerが34.6%を占め、2位に3倍以上の差をつけて圧倒的トップに立っているグラフ">
+                                <figure class="wpResult__body__img wpResult__body__img--graph">
+                                    <img src="../img/feature/img_wpResult_02.svg?date=250716" width="365" height="269" alt="国内のWordPressサイトシェアにおいて、XServerが34.6%を占め、2位に3倍以上の差をつけて圧倒的トップに立っているグラフ">
                                 </figure>
                             </div>
-                            <p class="wpreasonsShare__note">※2025年4月、Dataprovider.com 調べ。国内でWordPressを利用して運用されているサイト数を調査した結果によるもの。</p>
+                            <p class="wpResult__note">※2025年4月、Dataprovider.com 調べ。国内でWordPressを利用して運用されているサイト数を調査した結果によるもの。</p>
                         </div>
                         <div class="ftWpIntro__txt">
                             <p class="ftWpIntro__txt__ttl">
@@ -215,13 +215,13 @@
                     <section class="feature__block ft01Backbone">
                         <h4 class="feature__block__ttl">対外接続容量1Tbps超の自社専用<br class="visible-s">バックボーンネットワーク</h4>
                         <div class="feature__block__body">
-                            <div class="feature__item ft01Backbone__item">
+                            <div class="feature__item">
                                 <div class="feature__item__txtCont">
                                     <p class="feature__item__txt">エックスサーバーの自社専用バックボーンネットワークの対外接続容量は<strong>1Tbps超</strong>。トラフィック増加や高負荷時でも安定したサービスの維持が可能です。</p>
 
                                     <p class="feature__item__txt">また、近年増加しているDDoS（分散型サービス拒否）攻撃に対処するため、グローバル規模で攻撃をブロックできる高性能な対策システムも導入。さらに安定かつ高品質なサービスを提供いたします。</p>
                                 </div>
-                                <figure class="feature__item__img ft01Backbone__img"><img class="srcset" src="../img/feature/ft01_backbone_l.png?date=20250714" alt="他ユーザーの影響を受けずに安定！"></figure>
+                                <figure class="feature__item__img"><img class="srcset" src="../img/feature/ft01_backbone_l.png?date=20250714" alt="他ユーザーの影響を受けずに安定！"></figure>
                             </div>
                         </div>
                     </section>
